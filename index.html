@@ -13,26 +13,124 @@
     <link rel="icon" type="image/jpeg" href="../assets/img/Logo.jpg" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Specific Responsive Overrides for index.html -->
+    <style>
+        .app-header {
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Global Fix for Horizontal Layout Shift */
+        html,
+        body {
+            overflow-x: hidden !important;
+            width: 100vw;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Tablet Layout (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .app-container {
+                padding: 12px;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px;
+            }
+
+            .hero-section {
+                padding: 32px 20px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mobile / Smartphone Layout (max-width: 768px) */
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 8px;
+            }
+
+            .home-container {
+                padding: 16px 8px 32px 8px;
+                gap: 24px;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-search-input {
+                font-size: 0.95rem;
+                padding: 14px 16px 14px 44px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px;
+            }
+
+            .course-card {
+                padding: 24px 20px;
+            }
+
+            .course-title {
+                font-size: 1.25rem;
+            }
+
+            /* Fix Header */
+            .personalized-header {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 12px 16px !important;
+            }
+
+
+            /* Course Meta Pills */
+            .course-meta-pills {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .meta-pill {
+                padding: 4px 10px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="dark-theme">
-    <!-- Background Glass Orbs -->
-    <div class="glass-orb orb-1"></div>
-    <div class="glass-orb orb-2"></div>
-    <div class="glass-orb orb-3"></div>
-
     <!-- App Container -->
     <div class="app-container">
+        <!-- Background Glass Orbs -->
+        <div class="glass-orb orb-1"></div>
+        <div class="glass-orb orb-2"></div>
+        <div class="glass-orb orb-3"></div>
 
         <!-- Top Navigation / Header (Gamified Scholar Dashboard) -->
         <header class="app-header glass-panel personalized-header">
-            <!-- Left: Shortcuts & Settings -->
+            <!-- Left: Settings -->
             <div class="header-left-group" style="display: flex; align-items: center; gap: 12px;">
-                <button class="shortcut-pill-btn" title="View Starred Questions (12)">
-                    <span class="star-icon">★</span>
-                    <span class="shortcut-count">12</span>
-                </button>
-
                 <button id="theme-toggle-btn" class="action-icon-btn" title="Toggle Theme (Dark/Light)">
                     <svg id="theme-icon-sun" class="theme-icon hidden" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2">
@@ -53,24 +151,11 @@
                 </button>
             </div>
 
-            <!-- Center: Spacer -->
-            <div class="header-center-widgets"></div>
-
-            <!-- Right: Profile Box -->
+            <!-- Right: Navigation Links -->
             <div class="header-actions">
-                <div class="user-greeting-box" style="display: flex; align-items: center; gap: 12px;">
-                    <div class="greeting-text" style="text-align: right;">
-                        <div class="user-title-row" style="justify-content: flex-end;">
-                            <h2>Welcome back, <span class="highlight-name">Alex</span> 👑</h2>
-                            <span class="profile-level-badge mini-level">Lvl. 6</span>
-                        </div>
-                        <p class="user-meta">🎓 B.S. in MIS</p>
-                    </div>
-                    <div class="user-avatar-ring">
-                        <img src="https://ui-avatars.com/api/?name=Alex+Dung&background=3b82f6&color=fff&bold=true"
-                            alt="Alex Dung">
-                        <span class="status-indicator active" title="Online & Studying"></span>
-                    </div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <a href="index.html" class="nav-link-liquid">Homepage</a>
+                    <a href="#" class="nav-link-liquid">Contact</a>
                 </div>
             </div>
         </header>

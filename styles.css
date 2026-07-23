@@ -83,6 +83,11 @@ body.light-theme {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
@@ -1182,33 +1187,47 @@ button {
 }
 
 /* ==========================================================================
-   Responsive Design
+   Responsive Design (Standardized)
    ========================================================================== */
-@media (max-width: 1080px) {
+/* Tablet Layout: 768px to 1024px */
+@media (max-width: 1024px) {
   .workspace-grid {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 300px; /* Slightly narrower sidebar on tablet */
   }
+
+  .personalized-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+
 }
 
-@media (max-width: 860px) {
+/* Smartphone Layout: 320px to 768px */
+@media (max-width: 768px) {
   .workspace-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 column layout */
   }
 
   .sidebar {
     max-height: 280px;
+    order: 2; /* Move sidebar below main content */
+  }
+  
+  .main-content {
+    order: 1; /* Main content on top */
   }
 
   .app-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 14px;
   }
 
-  .header-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
+
 }
 
 /* ==========================================================================
@@ -1327,13 +1346,13 @@ body.light-theme .hero-search-input:focus {
   gap: 24px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .course-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .course-grid {
     grid-template-columns: 1fr;
   }
@@ -1733,18 +1752,6 @@ body.light-theme .profile-level-badge {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.15));
 }
 
-@media (max-width: 980px) {
-  .personalized-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .header-center-widgets {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
 
 /* ==========================================================================
    Header Back Button & Left Group Styling
@@ -1786,4 +1793,54 @@ body.light-theme .profile-level-badge {
 
 .back-home-btn:hover svg {
   transform: translateX(-2px);
+}
+
+/* Simple text with liquid glass hover effect */
+.nav-link-liquid {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: transparent;
+}
+
+.nav-link-liquid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--glass-bg-subpanel);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--glass-border);
+}
+
+.nav-link-liquid:hover {
+  color: var(--text-primary);
+}
+
+.nav-link-liquid:hover::before {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .nav-link-liquid:hover::before {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
