@@ -13,6 +13,31 @@
     <link rel="icon" type="image/jpeg" href="../../assets/img/Logo.jpg" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Mobile Responsive Header CSS -->
+    <style>
+        @media (max-width: 767px) {
+            .app-header.personalized-header {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 16px !important;
+                padding: 16px !important;
+            }
+            .header-left-group {
+                width: 100% !important;
+                justify-content: center !important;
+                flex-wrap: wrap !important;
+            }
+            .header-center-widgets {
+                width: 100% !important;
+                justify-content: center !important;
+            }
+            .header-actions {
+                width: 100% !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="dark-theme">
