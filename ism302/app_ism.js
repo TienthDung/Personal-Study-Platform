@@ -594,7 +594,7 @@ class QuizApp {
    * Filter questions based on current active tab and search input query
    */
   filterQuestions() {
-    const { questions, currentFilter, searchQuery, favorites } = this.state;
+    const { questions, currentFilter, searchQuery, favorites, quizProgress } = this.state;
 
     this.state.filteredQuestions = questions.filter(q => {
       // Category Filter
@@ -602,6 +602,16 @@ class QuizApp {
       if (currentFilter === 'single_choice' && q.type !== 'single_choice') return false;
       if (currentFilter === 'fill_blank' && q.type !== 'fill_blank') return false;
       if (currentFilter === 'favorites' && !favorites.includes(q.id)) return false;
+      
+      if (currentFilter === 'correct') {
+        const prog = quizProgress[q.id];
+        if (!prog || !prog.isCorrect) return false;
+      }
+      
+      if (currentFilter === 'incorrect') {
+        const prog = quizProgress[q.id];
+        if (!prog || prog.isCorrect) return false;
+      }
 
       // Search Query Match (across question text and options)
       if (searchQuery) {
@@ -669,6 +679,8 @@ class QuizApp {
       if (filter === 'single_choice') badge.textContent = countChoice;
       if (filter === 'fill_blank') badge.textContent = countFill;
       if (filter === 'favorites') badge.textContent = favorites.length;
+      if (filter === 'correct') badge.textContent = correctCount;
+      if (filter === 'incorrect') badge.textContent = answeredCount - correctCount;
     });
   }
 
