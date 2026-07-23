@@ -1,0 +1,303 @@
+id,type,question,options,correctAnswer
+1,true_false,"One of the four functional areas of operation is Human Resources (HR).","True|False",0
+2,true_false,"Historically, businesses have had organizational structures that separated the functional areas, but business schools have not been organized like that.","True|False",1
+3,true_false,"Information systems that are designed so functional areas share data are called integrated information system.","True|False",0
+4,true_false,"Sales forecast are historical records of sales.","True|False",1
+5,true_false,"The business process of Cash Flow Management in handled under the Accounting and Finance.","True|False",0
+6,true_false,"The functional are of Supply Chain Management (SCM) sets prices.","True|False",1
+7,true_false,"When manufacturing runs out of raw materials, it's known as a stockout.","True|False",0
+8,true_false,"To avoid stockout, manufactures might carry extra raw materials. This excess is known as safety stock.","True|False",0
+9,true_false,"Accounts receivable are recorded by Human Resources department (HR).","True|False",1
+10,true_false,"The business function of government compliance falls under the Supply Chain Management Functional area of operation.","True|False",1
+11,single_choice,"Which of the following is a functional area of operation?","packaging|supply chain management|shipping|baking",1
+12,single_choice,"Which business function is performed by accounting and finance?","cost allocation and control|taking sales orders|benefits|plant maintenance",0
+13,single_choice,"What are the computers, people, procedures, and software that store, organize, and deliver information in an organization?","The CPU|The process system|Information system|Personnel systems",2
+14,single_choice,"Today's managers are begging to think in terms of business process. A business process cuts across which functional areas of operation?","marketing and sales|supply chain management|accounting and finance|human resources|all the above",4
+15,single_choice,"Information systems that can be designed so that functional areas of operation share data are called:","integrated information systems|complete information system|non-middleware information system|linked information system",0
+16,single_choice,"Estimates of future product demands, which are the amount of a product that customer will want to buy, are called:","sales forecasting|sales divining|sales diving|sales deriving",0
+17,single_choice,"Which of the following is an input to the Marketing and Sales functional area?","production plans|raw materials orders|per-unit cost|accounts payable",2
+18,single_choice,"When purchasing a computer, the functional area responsible for handling the financial help for purchasing the computer is:","marketing and sales|accounting and finance|supply chain management|human resources",1
+19,single_choice,"Successful business managers view their business operations from the perspective of a(n):","satisfied customer|positive cash flow|profitable sale|accurate sales forecast",0
+20,single_choice,"When manufacturing runs out of raw materials, it is know as a(n):","shortfall|empty shelf|depletion|stockout",3
+21,single_choice,"_______ can result in management overestimating in inventory.","bulging raw materials|stockup|safety stock|excess baggage",2
+22,single_choice,"Which of the following outputs would emerge from the Accounting and Finance functional ares?","packaging orders|sales strategy|regulation compliance|financial reports",3
+23,single_choice,"Which of the following is an input to HR?","personnel forecast|sales data|layoff and recall company policy|travel expense company policy",0
+24,fill_blank,"_____________ programs are core software used by companies to coordinate information in every area of the business.","",enterprise resources planning
+25,fill_blank,"A collection of activities that takes one or more kinds of input and creates an output that is of value to the customer is called a(n) ________________.","",business process
+26,fill_blank,"The business functions of financial accounting, cost allocation and control, planning and budgeting, and cash-flow management take place in the __________ functional area of operation.","",accounting and finance
+27,fill_blank,"One example of the business function that happen in the human resources area of operation would be __________.","",recruiting and hiring
+28,fill_blank,"A(n) ____________ includes the computer, people procedures, and software that store, organize, and deliver information.","",information system
+29,fill_blank,"Information system designed so that functional area share data are called ________.","",integrated information system
+30,fill_blank,"A shortfall of raw materials is know as a(n) ____________.","",stockout
+31,fill_blank,"To avoid stockout manufactures might carry extra raw materials known as _____________.","",safety stock
+32,true_false,"Individual information systems for each functional area in a company are know as silos.","True|False",0
+33,true_false,"Silos of information are also know as stovepipes.","True|False",0
+34,true_false,"The complex hardware and software that goes into an ERP system was not available until the 1970's.","True|False",1
+35,true_false,"The capabilities of computer hardware doubling every 18 months is known as Gates Law.","True|False",1
+36,true_false,"Scalability means that the capacity of a piece of equipment can be increased by adding new hardware.","True|False",0
+37,true_false,"The software that holds data in an organized function is known as a database management system, or a DBMS.","True|False",0
+38,true_false,"Materials requirement prediction (MRP) software allows a plant manager to plan production and raw materials requirement by guess- timation.","True|False",1
+39,true_false,"The direct computer-to-computer exchange of standard business document is known as EDI, or electronic data interchange.","True|False",0
+40,true_false,"The functional model of business and management was useful for decades and is still the current school of thought.","True|False",1
+41,true_false,"SAP expanded into international markets but kept the software in a single language, German, and a single currency, the Euro.","True|False",1
+42,true_false,"SAP's R/3 can only run on mainframe computers.","True|False",1
+43,true_false,"SAP's goal was to develop a standard software production that could be configured to meet the need of each company.","True|False",0
+44,true_false,"Old system are know as legacy system.","True|False",0
+45,true_false,"Open architecture encourages software companies are encouraged to develop add-on-software.","True|False",0
+46,true_false,"In the accompanying figure, data is entered into the system once and then used throughout the organization. In figure 2-4 data flows within an integration information system.","True|False",0
+47,true_false,"An ERP system allows data to be entered once, and then used throughout the organization.","True|False",0
+48,true_false,"An ERP module is a module that automates a specific business function.","True|False",1
+49,true_false,"A company's level of data integration is highest when the company uses one vendor to supply all of its ERP modules.","True|False",0
+50,true_false,"An important consideration in minimizing the risk of fraud and abuse is defining limits on the dollar value of business transactions that certain employees can process.","True|False",0
+51,true_false,"A best practice is the best, most efficient way of handling a certain business process.","True|False",0
+52,true_false,"One benefit of ERP systems is that ERP integrates people and data while eliminating the need to update and repair many separate computer systems.","True|False",0
+53,true_false,"A large company will likely spent $1 million on ERP implementation, which includes software and training.","True|False",1
+54,true_false,"Not every company is a good match with the constraints inherent in ERP.","True|False",0
+55,true_false,"SAP's internal programming language is Visual Basic.","True|False",1
+56,true_false,"A return on investment (ROI) is an assessment of an investment project's value, calculated by dividing the value of the project's benefits by the project's cost.","True|False",0
+57,single_choice,"Individual information systems for each functional area in a company are known as:","silos|bagpipes|tubers|separated systems.",0
+58,single_choice,"The complex software and hardware required for ERP systems was not available until the:","1960's|1970's|1980's|1990's",3
+59,single_choice,"The observation that the number of transistors built onto a computer chip doubles every 18 months is known as:","moore's law|gates prophesy|doubletake|acceleration",0
+60,single_choice,"When a piece of equipment's capacity is exceeded, its capacity can be increased by adding new hardware. This is commonly known as:","adaptability|middleware|scalability|computability",2
+61,single_choice,"In the 1980s, ____, the technology that holds data in an organized fashion, existed for ERP development.","spreadsheets|DBMS|client/server architecture|word-processors",1
+62,single_choice,"_______ software allows a plant manager to plan production and raw materials requirements by working backward from the sales forecast.","DBMS|EDI|MRP|EFT",2
+63,single_choice,"The direct computer-to-computer exchange of standard business documents is known as:","MRP|e-mail|EDI|DDS",2
+64,single_choice,"In a process-oriented company, the flow of information and management activity is ______, in line with the flow of materials and products.","horizontal across functions|vertical from top level management down through the hierarchical management structure|vertical through functions|horizontal from marketing and sales to inventory and production",0
+65,single_choice,"Software _______ are individual programs that can be purchased, installed, and run separately, but extract data from the common database.","nodes|chunks|modules|tidbits",2
+66,single_choice,"In ______, third-party software companies are encouraged to develop add-on software products that can be integrated with existing software.","open architecture|clip-ons|integrated pieces|piecemeal nodes",0
+67,single_choice,"____ is SAP's biggest competitor.","J.D. Edwards|PeopleSoft|Microsoft|Oracle",3
+68,single_choice,"Old information and computer systems are known as ______.","dinosaurs|passe systems|legacy systems|relics",2
+69,single_choice,"Which ERP package is a popular software choice for managing human resources and financial activities at universities?","SAP|PeopleSoft|Microsoft Dynamics|J.D. Edwards",1
+70,single_choice,"Which R/3 module records sales orders?","SD|MM|PP|QM",0
+71,single_choice,"15. Which of the following modules in SAP ERP maintains production information?","SD|MM|PP|QM",2
+72,single_choice,"The ______ module helps the company manage fixed-asset purchases (plant and machinery) and related depreciation.","Plant Maintenance|Asset Management|Materials Management|Product Planning",1
+73,single_choice,"Which of the following module in SAP is a set of tools that can automate the activities in SAP ERP?","Workflow|Controlling|Financial Accounting|Project System",0
+74,single_choice,"When top management is queried on the reasons for implementing ERP systems, the overriding answer is ____.","cost saving|control|increased profitability|inventory management",1
+75,single_choice,"Which R/3 module records transactions in the general ledger?","CO|WF|FI|PS",2
+76,single_choice,"After a company chooses the modules they want to implement, they must decide on ____ options, which allow the customer to customize the modules to fit their business to some extent.","settings|configuration|flexible|tandem",1
+77,single_choice,"As part of the ______ process, a company can define any number of tolerance groups with a range of limits, and can then assign employees to these tolerance groups. Figure 2-6 A customization example: tolerance groups to set transaction limits","manufacturing|development|configuration|programming",2
+78,single_choice,"Which of the following is a benefit to running an ERP system?","Global integration|Elimination of updating and repairing multiple systems|Capability to manage operations, not just monitor them|All of the above are benefits",3
+79,single_choice,"An ERP system for a large company will cost ____, including software, training, and implementation.","$100-500 million|$1-5 million|$1-5 billion|$50,000-$500,000",0
+80,single_choice,"SAP's internal programming language is called:","R/3|C++|Visual Basic|ABAP",3
+81,single_choice,"One assessment of a project's value is calculated by the:","DVT|PMT|ROI|PPT",2
+82,single_choice,"Bumpy rollouts of ERP systems are usually caused by:","software problems|people problems|hardware problems|configuration problems",1
+83,fill_blank,"____________________ states that the number of transistors on a computer chip doubles every 24 months.","",moore's law
+84,fill_blank,"A central-local computer arrangement is called ____________________ architecture.","",client server
+85,fill_blank,"____________________ means that the capacity of a piece of equipment can be increased by adding new hardware.","",scalable
+86,fill_blank,"The software that holds that data in an organized fashion, and that allows for the easy retrieval of data, is the ____________________.","",DBMS database management system
+87,fill_blank,"____________________ software allows a plant manager to plan production and raw materials requirements by working backward from the sales forecast.","",MRP material requirement planning
+88,fill_blank,"The prediction of future sales is the ____________________.","",sale forecast
+89,fill_blank,"____________________ is the direct computer-to-computer exchange of standard business documents.","",EDI electronic data integration
+90,fill_blank,"Originally, in English, SAP was an acronym for ____________________.","",system analysis and program development
+91,fill_blank,"In ____________________, third-party software companies are encouraged to develop add-on software products that can be integrated with existing software.","",open architecture
+92,fill_blank,"Old systems are known as __________________.","",legacy system
+93,fill_blank,"SAP's biggest competitor is ____________________.","",oracle
+94,fill_blank,"The ____________________ records sales orders and scheduled deliveries. Information about the customer (pricing, address and shipping instructions, billing details, and so on) is maintained and accessed from this module.","",SD sales and distribution
+95,fill_blank,"When data are entered into the system, data in all related files in the ____________________ are automatically updated.","",central database
+96,fill_blank,"R/3's design incorporates ____________________, which means that R/3 designers choose the best, most efficient ways in which business processes should be handled.","",best practices
+97,fill_blank,"SAP's internal programming language is ____________________.","",advanced business application programming
+98,fill_blank,"____________________ help businesses customize the software to fit their unique needs.","",configuration
+99,fill_blank,"An assessment of an investment's project value that is calculated by dividing the value of the project's benefits by the value of the project's cost is known as a(n) ____________________.","",ROI return on investment
+100,true_false,"In SAP R/3, relatively permanent data about customers is kept in the Customer Master Data table.","True|False",0
+101,true_false,"In SAP R/3, relatively permanent data about inventory is kept in the Material Master Data table.","True|False",0
+102,true_false,"In SAP R/3, relatively permanent data in the Material Master Data table is available to only one module, the Materials Management module.","True|False",1
+103,true_false,"In SAP R/3, relatively permanent data about customers in the Customer Master Data table is available to only the Sales and Distribution module.","True|False",1
+104,true_false,"SAP R/3's system allows one to group customers, which is commonly known as an ""organizational structure"".","True|False",0
+105,true_false,"In SAP R/3, the linked set of document numbers is called the ""document flow"".","True|False",0
+106,true_false,"In SAP R/3 the electronic evidence of a transaction is called a document.","True|False",0
+107,true_false,"The first step in the SAP ERP sales and distribution process is the Sales Order Processing step.","True|False",1
+108,true_false,"Pricing cannot be set or configured in the SAP ERP system.","True|False",1
+109,true_false,"Pricing can be set using condition techniques.","True|False",0
+110,true_false,"CRM software stands for Custom Resource Management. This is a specialized type of ERP.","True|False",1
+111,true_false,"Global ATP allows for searching of a particular product at multiple plants worldwide.","True|False",0
+112,true_false,"Returned products to a company are processed more efficiently if the customer first calls for a RMA.","True|False",0
+113,true_false,"An inquiry in the SAP ERP system occurs in the Delivery step of the Sales and Distribution cycle.","True|False",1
+114,true_false,"In the SAP ERP system, delivery means releasing the documents that the warehouse uses to pick, pack, and ship orders, rather than the traditional definition of transferring goods.","True|False",0
+115,true_false,"The PO Number is a number assigned by a company to track orders in the SAP ERP system.","True|False",1
+116,true_false,"With on-demand CRM, the software and computer equipment reside with the CRM provider; it is not installed in-house.","True|False",0
+117,fill_blank,"In SAP ERP the electronic evidence of a transaction is called a(n) ____.","",document
+118,fill_blank,"A customer calls up to find out how much 1000 units of a product would cost. This is an example of ____ in the sales and distribution process.","",presales activities
+119,fill_blank,"A customer is granted a 10% price discount in a large order. This is an example of an activity in ____ in the sales and distribution process.","",sales order processing
+120,fill_blank,"A customer's order is checked to see if it can be produced and delivered by the requested date. This is an example of ____ in the sales and distribution process.","",inventory sourcing
+121,fill_blank,"A customer's documents are released to the warehouse so that the goods can be gathered, packed and boxed. This is an example of ____ in the sales and distribution process.","",delivery and billing
+122,fill_blank,"A customer's remittance causes Cash to be debited and Accounts Receivable to be credited. This is an example of ____ in the sales and distribution process.","",payment
+123,fill_blank,"In SAP ERP, the history of a transaction (such as a sales order) can be researched by looking at its ____.","",document flow
+124,fill_blank,"What kind of software can give top management an overview of a company's complete relationship with a customer?","",Customer Relationship Management Software
+125,fill_blank,"In the sales order process, there is a number used in the SAP ERP sales order that in a paper process would be pre-printed on the sales document, usually in sequential number order. It's assigned by the customer to the sales order. What is this number?","",Purchase Order Number
+126,fill_blank,"Setting prices for customers can be very complex. SAP helps by offering a control mechanism, called ____, to determine how much to charge a given customer for a given product.","",condition technique
+127,fill_blank,"The ____ system communicates with SAP ERP, BW, and APO systems in developing and executing its plans.","",CRM
+128,fill_blank,"What software can automatically route customers who contact the company to a sales representative? Companies can use this software to forecast customer needs.","",Sales force automation
+129,fill_blank,"The SAP ERP system allows users to define various ways to group customers and salespeople. These groups are called ____.","",organizational structures
+130,fill_blank,"In ____ CRM, the software and equipment reside with the CRM provider; it is not installed in-house.","",on-demand
+131,fill_blank,"Which of the following are benefits to CRM?","",All of the above
+132,fill_blank,"The goal of ____________________ software is to provide a ""single face to the customer.""","",CRM (customer relationship management)
+133,fill_blank,"With global____________________, the R/3 system automatically checks all facilities and determines the most cost-efficient facility to use to meet the customer's request in terms of ordering and delivering goods.","",Available-To-Promise
+134,fill_blank,"Briefly describe four kinds of decisions made by Marketing managers.","","What products should we produce? How much of each product should we produce? How are our products best promoted and advertised? How should our products be distributed for maximum customer satisfaction? What price should we charge for our products?"
+135,fill_blank,"In SAP ERP a sales order is entered only once, by the sales people. It need not be entered a second time, in Accounting, to keep the books. Briefly explain why that second entry is not needed in SAP R/3.","","By contrast, ERP systems integrate Accounting with all business processes, so that when a sales order is recorded, the related accounting data is updated automatically."
+136,fill_blank,"Briefly describe two CRM activities.","","One-to-one marketing: Once a customer is categorized, the company can tailor products, promotions, and pricing accordingly. Sales force automation: Occurrences of customer contacts are logged in the company's database. Sales campaign management: This software lets a company organize a marketing campaign and compile its results. Marketing Encyclopedias: This software serves as a database of promotional literature about products. Call center automation: When customers call a company to get assistance with a company's products, representatives can query a knowledge management database containing information about the product."
+137,fill_blank,"What does the term Delivery mean in the SAP R/3 system?","","In the SAP R/3 system, the word delivery means releasing the documents that the warehouse uses to pick, pack, and ship orders, rather than the traditional use of the term to describe the transferal of goods."
+138,fill_blank,"What are the three benefits of CRM?","","Lower costs Higher revenue Improved strategy and performance measurement"
+139,true_false,"An ERP system is a good tool for developing and executing production plans because it integrates the function of production planning, purchasing, materials management/warehousing, quality management, sale, and accounting.","True|False",0
+140,true_false,"Production planners aggregate products into product groups to make forecasts and plans more accurate.","True|False",1
+141,true_false,"The Sales and Operations Planning process is used to combine the sales forecast with capacity information to determine a production plan for finished goods.","True|False",0
+142,true_false,"Demand Management is the process where sales forecasts are adjusted to incorporate the impact of marketing initiatives.","True|False",1
+143,true_false,"The MRP process determines the schedule of finished goods production.","True|False",1
+144,true_false,"The term supply chain describes all the activities required to move raw material from inventory to manufacturing for the purpose of producing a product.","True|False",1
+145,true_false,"In a traditional supply chain, demand information is transmitted rapidly to all members of the supply chain.","True|False",1
+146,true_false,"ERP systems are necessary to implement good supply chain management.","True|False",1
+147,true_false,"The percentage of the order that the supplier provides in the first shipment is known as the first-rate.","True|False",1
+148,true_false,"Make to order items are produced to fill customer's requests.","True|False",0
+149,true_false,"The cost it normally takes to manufacture a product, which is usually derived from historical data and any changes that have occurred since then, is known as a structured cost.","True|False",1
+150,true_false,"Rough-cut planning is a common term in manufacturing for aggregate planning.","True|False",0
+151,true_false,"The production plan for all finished goods is known as the MPS, or the master production schedule.","True|False",0
+152,true_false,"Another term for the list of ingredients required to make a product is the bill of materials.","True|False",0
+153,true_false,"Lead times and lot sizing help a company determine the transfer of goods to the customer.","True|False",1
+154,true_false,"Because Fitter Snacker uses large quantities of oats, the most cost-effective way to purchase oats is to buy a farm and grown them.","True|False",1
+155,true_false,"After material requirements are entered into the system, the program automatically turns the planned orders into purchase orders without further input from planners.","True|False",1
+156,true_false,"The percentage of the order that the supplier provided in the first shipment is known as the initial order lead time.","True|False",1
+157,true_false,"The initial fill rate measures the time needed for the supplier to fill the order.","True|False",1
+158,fill_blank,"A make-to-stock production system is where:","",items are made for inventory in anticipation of sales orders.
+159,fill_blank,"An unexpected increase in product demand can lead to:","",all of the above
+160,fill_blank,"The Fitter Snacker company sold 6,435 cases of snack bars in June of the previous year. They are expecting sales to increase by 3% this year. In addition, they are launching a promotional campaign in May, which they expect will increase sales in June by an additional 500 cases. What is the sales forecast for June of this year that Fitter Snacker should use?","",7128
+161,fill_blank,"Fitter Snacker can produce 333.3 cases of snack bars per day during the standard 8-hour work week. They can work 2 hours of overtime per weekday, plus 4 hours on Saturday. They are developing an SOP for a month with 23 weekdays and 4 Saturdays. What is the maximum number of cases that Fitter Snacker can produce in the month if they schedule workers for overtime on weekdays only?","",9582
+162,fill_blank,"On weekday overtime, they can produce 1.25 times the normal output, or (1.25)(333.3) = 416.6. In 23 days, they can produce (416.6)(23) = 9,581.8 cases, which rounds to 9,582. Adding in Saturdays is equivalent to two additional days of regular production, or (2)(333.3) = 666.6. The total time available is 9,582 + 666 = 10,248.6, which rounds to 10,249. What is the maximum number of cases they can product in the month if they schedule workers for overtime on weekdays and Saturdays?","",10249
+163,fill_blank,"The production plan at Fitter Snacker calls for 4,134 cases of snack bars in January. If there are 22 days in the month, how many cases of snack bars should be produced in a 4-day week?","",752
+164,fill_blank,"What Planned Orders will the MRP logic create?","",An order for 44000 units in week 2
+165,fill_blank,"Immediately after MRP is run in SAP ERP:","",the stock/requirements list and MRP list are both updated and show the same information.
+166,fill_blank,"In detailed scheduling, longer production runs of a particular product:","","increases the available capacity by reducing the frequency of setups. increases finished goods inventory levels."
+167,fill_blank,"The order of the steps in the SAP R/3 production planning process are:","","Sales Forecasting, Sales and Operations Planning, Demand Management, MRP, Purchasing, Detailed scheduling, Production"
+168,fill_blank,"The production plan for Fitter Snacker calls for 7000 cases of the snack bar product group in June. If the snack bar product group consists of NRG-A bars and NRG-B bars with the proportion 70% NRG-A bars and 30% NRG-B bars, how many NRG-A bars should be produced in June?","",4900
+169,fill_blank,"The costs normally required to manufacture a product, which are calculated from historical costs and any changes from that, are known as ____.","",standard costs
+170,fill_blank,"____ are disaggregated to generate detailed production schedules.","",Rough-cut plans
+171,fill_blank,"What is the production plan for all finished goods?","",MPS - master production schedule
+172,fill_blank,"What process answers the question ""What do we need to order to produce the product, and when do we need to order these raw materials?""","",MRP - materials requirements planning
+173,fill_blank,"What metric tracks the number of times a supplier meets the agreed upon delivery date?","",on-time performance
+174,fill_blank,"In the accompanying figure, which shows the SAP ERP production planning process, what is A?","",Sales Forecasting
+175,fill_blank,"In the accompanying figure, which shows the SAP ERP production planning process, what is B?","",Starting Inventory
+176,fill_blank,"In the accompanying figure, which shows the SAP ERP production planning process, what is C?","",Detailed Scheduling
+177,fill_blank,"In the accompanying figure, which shows the SAP ERP production planning process, what is D?","",MRP
+178,fill_blank,"What stage of the production planning process splits Fitter Snacker's monthly production planning values into finer time periods?","",Demand Management
+179,fill_blank,"The ____________________, shown in the accompanying figure for Fitter Snacker, is a list of the materials needed to make NRG-A and NRG-B bars.","",BOM (Bill of Materials
+180,fill_blank,"____________________ refers to the process of determining production quantities (for raw materials produced in-house) and order quantities (for purchased items).","",Lot sizing
+181,true_false,"An income statement shows a company's profit or loss in a period of time.","True|False",0
+182,true_false,"When a company has an ERP system, it no longer needs a general ledger.","True|False",1
+183,true_false,"In the SAP ERP system, input to the general ledger occurs simultaneously with the business transaction in the specific module. Many SAP ERP modules cause transaction data to be entered into the general ledger.","True|False",0
+184,true_false,"When a company has an ERP system, the general ledger is maintained by the ERP system.","True|False",0
+185,true_false,"The SAP ERP system has a module called Accounting and Finance.","True|False",1
+186,true_false,"In SAP ERP access to general ledger accounts is spread over many modules.","True|False",0
+187,true_false,"The cost of heating the plant would be considered part of manufacturing overhead.","True|False",0
+188,true_false,"Using standard costs to accumulate manufacturing costs means that the company does not have to keep track of actual manufacturing costs.","True|False",1
+189,true_false,"If actual costs in the month equaled standard costs, no balance sheet or income statement adjustments would be needed. Actual costs never exactly equal expected costs, however, so adjustments are almost always needed. The differences between actual costs and standard costs are called cost variances.","True|False",0
+190,true_false,"Activity-based costing treats overhead costs as more direct than traditional cost-accounting methods have treated them.","True|False",0
+191,true_false,"In activity-based costing, overhead costs are assigned to products based on the manufacturing activities that gave rise to the costs.","True|False",0
+192,true_false,"ERP systems help in resolving conflicts in goals, standardizing basic processes, and controlling product costs.","True|False",0
+193,true_false,"Having ERP will require a company to restrict the number of cost allocation bases.","True|False",1
+194,true_false,"In an ERP system, data does not flow from one module to another.","True|False",0
+195,true_false,"The term drill down refers to the ability to view the details behind a summary of information.","True|False",0
+196,true_false,"With an ERP system, the job of tracking all the data required for a financial report can be a monumental undertaking.","True|False",1
+197,true_false,"A Business Warehouse system is a completely separate information system that extracts data from the ERP system.","True|False",0
+198,true_false,"The U.S. Congress passed the Sarbanes-Oxley Act of 2002 in response to the fraud and abuse in the Enron collapse.","True|False",0
+199,true_false,"The Sarbanes-Oxley Act requires that financial statements filed with the SEC include a statement signed by the chief executive officer and chief financial officer, certifying that the financial statement complies with the SEC rules.","True|False",1
+200,true_false,"It is very easy to delete items in the ERP system.","True|False",1
+201,true_false,"SAP ERP has sophisticated user administration tools that allow different levels of authorization management, to ensure that employees can perform only the transactions required for their jobs.","True|False",0
+202,true_false,"Tolerance groups make sure employees do not exceed their authority in financial transactions.","True|False",0
+203,true_false,"Another name for an income statement is a profit and loss statement.","True|False",0
+204,true_false,"n an ERP system, the balance sheet and P&L statements are database reports.","True|False",0
+205,true_false,"Managerial accounting deals with determining the costs and profitability of the company's activities.","True|False",0
+206,true_false,"In the SAP ERP system, inputs to the general ledger occur simultaneously with input of business transactions to the various modules.","True|False",0
+207,true_false,"The key feature of any ERP system is the ability to drill down from a report to the source documents (transactions) that created it.","True|False",0
+208,single_choice,"The process of transferring balances for temporary or nominal accounts, such as revenue, expense, gain, and loss, to the retained earnings account is called ____.","cost accounting|account closure|periodic closure|closing the books|statement wrap-up",3
+209,single_choice,"When finished goods are transferred from the assembly line to the warehouse, an employee in the warehouse records the transaction using a terminal or a barcode scanner. Which SAP ERP module records this change?","Materials Management|Asset Management|Sales and Distribution|Controlling",0
+210,single_choice,"Which general ledger document tracks the amount of money that a customer owes for the goods received by the customer?","Balance sheet|Accounts receivable|Accounts payable|Income statement",1
+211,single_choice,"Which financial statement shows account balances such as, cash held, amounts owed to the company by customers, the cost of raw materials and finished goods inventory?","Income statement|Balance sheet|Tolerance group|Year end report",1
+212,single_choice,"Assume that a buyer calls a seller to order $3,000 worth of goods and her credit limit is $10,000. If the sellers accounts receivable for the customer is already $8,500, how much of the new order will be accepted?","The entire amount|$1,500 only|No amount|$10,000 only",1
+213,single_choice,"What are the manufacturing costs that include factory utilities, general factory labor such as custodians or security guards, factory managers' salaries, storage, insurance, and other manufacturing-related costs?","Direct costs|Plant costs|Overhead costs|Manmade costs",2
+214,single_choice,"In ____, activities associated with overhead cost generation are identified and then records are kept on the costs and on the activities.","activity-based costing|backoffice costing|run of the mill costing|plant operation costing",0
+215,single_choice,"Each transaction in SAP ERP gets its own unique number, which acts as an index to the appropriate database table entries. This is known as ____.","document reference|document flow|auditing codes|unique codes",1
+216,single_choice,"Figure 2 is Fitter Snacker's ____.","Balance Sheet|Income Statement|Credit Report|Document Flow",0
+217,single_choice,"Figure 1 is Fitter Snacker's ____.","Balance Sheet|Income Statement|Credit Report|Document Flow",1
+218,single_choice,"Another name for an income statement is a ____ statement.","credit|profit and loss|sales|revenue",1
+219,single_choice,"In an ERP system, the balance sheet and P&L statements are ____.","generated yearly|not available|database reports|modules",2
+220,single_choice,"What is the advantage to credit management in SAP ERP?","Marketing and Sales get weekly reports.|The data is in real-time.|Payments are posted daily.|There is no advantage.",1
+221,single_choice,"If the cost of manufacturing NRG-A bars is $0.72 per bar, how much does FS need to charge to make a profit of $0.25?","$1.00|$0.99|$0.97|$1.25",2
+222,single_choice,"What is the sum of direct materials, production overhead, and direct labor?","COGM - cost of goods manufactured|COGS - cost of goods sold|COGP - cost of goods produced|COGS - cost of goods shipped",0
+223,single_choice,"Figure 3 is an example of ____.","Production Planning|MRP|Document Flow|Configuration Settings",2
+224,single_choice,"The key pieces of information for cost analysis is the direct material costs and the ____.","direct labor cost|overhead cost|driver cost|selling cost",0
+225,single_choice,"If Fitter Snacker's cost of making a case of bars is $209.82. There are 24 bars to a box and 12 boxes to a case. How much money does it cost Fitter Snacker to make each individual bar?","$17.49|$1.00|$8.74|$0.73",3
+226,single_choice,"Any business events that occur between companies and their subsidiaries are known as ____________________.","intracompany transactions",0
+227,single_choice,"With a properly configured and managed ERP system, there are direct links between the company's ____________________ and individual transactions that make up the statements, so that fraud and abuse can be detected more easily.","financial statements",0
+228,true_false,"The task associated with managing a company's workforce is know as human capital management or HCM.","True|False",0
+229,true_false,"The responsibilities of an HR department include manufacturing goods and purchasing raw materials.","True|False",1
+230,true_false,"Ensuring that these tasks are accomplished and that valid human resources-related information is communicated throughout the organization requires a system that effectively controls the flow of information.","True|False",0
+231,true_false,"Employee turnover is strongly tied to effective communications from human resources.","True|False",1
+232,true_false,"Employee turnover is strongly tied to job satisfaction and compensation.","True|False",0
+233,true_false,"Succession planning should be performed on every employee in the company.","True|False",1
+234,true_false,"A succession plan outlines the strategy for replacing key employees when they leave the company or move to another position within the company. The success of a company depends in large part on the skills, abilities, and experience of its management team.","True|False",0
+235,single_choice,"The tasks associated with managing a company's workforce is now known as ____.","human capital management|resource management|workforce management|hiring management",0
+236,single_choice,"The job of managing salary and benefits provided to each employee and confirming that the proper benefits are disbursed to new and current employees falls under the ____ department.","Accounting and Finance|Human Resources|Individual|Administrative",1
+237,single_choice,"To record employee working times, SAP ERP uses ____.","punched cards|RFIDs|CATS (cross application time sheets)|multiple databases",2
+238,single_choice,"The parts of an employee's pay that is comprised of base pay, bonuses, gratuities, overtime, sick pay , and vacation allowances are known as ____.","payroll run|statutory deductions|voluntary deductions|remuneration elements",3
+239,single_choice,"______ are skills or abilities associated with a position, while _______ are skills or abilities associated with a specific employee.","Qualifications; requirements|Requirements; qualifications|Duties; tasks|Tasks; duties",1
+240,single_choice,"What is a plan for replacing key employees called?","Duty roster|Replacement circular|Succession plan|Reincarnation study",2
+241,single_choice,"SAP's ERP helps the administration of employees taking time off under a government act that allows compensation for family and medical problems. This act, passed in 1993, is the ____.","FIA|QOTA|FMLA|PROBA",2
+242,single_choice,"Which functional part of the organization communicates changes in salaries, benefits, and policies to employees?","Sales and Marketing|Supply Chain Management|Accounting and Finance|Human Resources",3
+243,single_choice,"What is the source of Fitter Snacker's problems with Human Resources?","Inaccurate information|Out-of-date information|Inconsistent information|All of the above",3
+244,single_choice,"What is the name of the group of candidates selected to be interviewed by Fitter Snacker for a particular position? For example, assume 20 applicants applied and only three were selected to be interviewed.","Short list|Select group|Final three|Applicants",0
+245,single_choice,"What is probably the most important function of a human resources department?","Recruiting and hiring|Payroll processing|Benefits management|New hire training",1
+246,single_choice,"SAP ERP provides an Organization and Staffing Plan tool that is used to define a company's ____ and the positions within the organizational structure as a whole.","management structure|benefits program|hiring process|job titles",0
+247,single_choice,"The process of determining each employee's pay is called a ____.","payroll run|weekly round-up|cash-out|remunerations session",0
+248,single_choice,"The SAP ERP system evaluates the input data to payroll and notes any discrepancies in a(n) ____.","payroll report|error log|discrepancy list|off-target list",1
+249,single_choice,"An outgrowth of the ____ is that companies must account for the expected costs that occur as a result of long-term incentives such as the exercising of stock options.","Income Statement|Balance Sheet|Consolidated statements|Sarbanes-Oxley Act",3
+250,single_choice,"Companies are increasingly aware of the importance of an experienced, well-trained workforce and have begun using the term human capital management (HCM) to describe the tasks associated with managing a company's workforce.","human capital management",0
+251,single_choice,"The remuneration elements of an employees pay include the base pay, bonuses, gratuities, overtime, sick pay, and vacation allowances that the employee has earned during the pay period.","remuneration elements",0
+252,single_choice,"The statutory and voluntary deductions include taxes (federal, state, local, Social Security, and Medicare), company loans, and benefit contributions.","statutory and voluntary deductions",0
+253,single_choice,"Requirements are skills or abilities associated with a position, while qualifications are skills or abilities associated with a specific employee. Requirements and qualifications refer to the same concept from a different perspective.","requirements vs qualifications",0
+254,single_choice,"A succession plan outlines the strategy for replacing key employees when they leave the company or move to another position within the company.","succession planning",0
+255,true_false,"A process model can be as simple as a diagram with boxes and arrows or as complex as computer software that allows for process simulation.","True|False",0
+256,true_false,"A graphical representation of the movement or flow of concrete or abstract items is a spreadsheet.","True|False",1
+257,true_false,"The term process mapping is often used interchangeably with flowcharting","True|False",0
+258,true_false,"An assessment of disparities between an organization's current situation and its long-term goals is known as a swimlane assessment.","True|False",1
+259,true_false,"Process boundaries define which activities are to be included in the process.","True|False",0
+260,true_false,"ERP software such as SAP has many business applications but none of them support business processes.","True|False",1
+261,true_false,"In flowchart analysis, each activity in the process is analyzed for the value it adds to the product or service.","True|False",1
+262,true_false,"Dynamic process modeling takes a basic process flowchart and puts it into motion, using computer simulation techniques to facilitate the evaluation of proposed process changes.","True|False",0
+263,true_false,"Software programs that automate the execution of business processes and address all aspects of the process are called ERP Wizards.","True|False",1
+264,true_false,"Organizational change management is a trivial part of the implementation process","True|False",1
+265,single_choice,"A graphical representation of a business process is known best as a ____.","map|state diagram|flowchart|stack",2
+266,single_choice,"When doing process mapping, one of the most important tasks is to define the ____. These define which activities are to be included in the process.","scales|process boundaries|legends|scopes",1
+267,single_choice,"Beyond the simple tools of flowcharting, a helpful tool called ____ allows one to describe a business process in greater or less detail depending on the task at hand.","hierarchical modeling|drill down staging|detail focused charting|magnifying glass charting",0
+268,single_choice,"A deployment flowchart is also known as a(n) ____.","event process chain flowchart|swimlane flowchart|ERP flowchart|best practices flowchart",1
+269,single_choice,"In value analysis, which of the following activities should be eliminated?","Real value|Business value|No value|Value add",2
+270,single_choice,"In value analysis, which of the following activities is defined as a value for which the customer is willing to pay?","Real value|Business value|No value|Value add",0
+271,single_choice,"Which software programs automates the execution of business processes?","SAP Wizards|ASAP|Workflow tools|Swimlanes",2
+272,single_choice,"Managing the human behavior aspects of organizational change is called organizational change management (OCM).","organizational change management",0
+273,single_choice,"A common problem in ERP implementations is scope creep, which is the unplanned expansion of the projects goals and objectives. Scope creep causes the project to go over time and over budget and increases the risk of an unsuccessful implementation."," | | |scope creep",3
+274,true_false,"A process model can be as simple as a diagram with boxes and arrows or as complex as computer software that allows for process simulation.","True|False",0
+275,true_false,"A radio frequency identification device (RFID), which can be attached to products, is a small package (or tag) made up of a microprocessor and an antenna.","True|False",0
+276,true_false,"Radio frequency identification device (RFID) tags can degrade in bad weather, and an employee must point an RFID reader directly at a RFID tag to read it.","True|False",1
+277,true_false,"The major opportunity for radio frequency identification device (RFID) technology to reduce out-of-stock situations is not in the supply chain between the manufacturer and the storeroom at the individual store, but between the backroom stock area and the store shelves.","True|False",0
+278,true_false,"Business intelligence (BI) is a term used to describe a range of different applications and technologies used to extract and analyze large amounts of data to aid in decision making.","True|False",0
+279,true_false,"Business analytics is the concept of developing strategic goals for the organization and then gathering data to evaluate how the organization is performing in relation to those goals.","True|False",1
+280,true_false,"Enterprise requirements planning is a relatively new term that describes the business and technology functions that manage information as a corporate asset.","True|False",1
+281,true_false,"The SAP Enterprise Portal gives users complete access to all their work on a single screen, using links to connect users to all the major applications needed to perform their jobs.","True|False",0
+282,true_false,"The combination of software tools that enables an organization's various systems and applications to communicate with other applications over the Internet is called Web services.","True|False",0
+283,true_false,"SAP's Web services platform is DreamWeaver, which is a collection of components that support business transactions over the Internet by providing seamless connectivity of diverse applications through the Internet.","True|False",1
+284,true_false,"Software as a service (SaaS) is a software delivery model in which a software product is hosted by a company on its servers and is accessed by customers via a Web browser.","True|False",0
+285,single_choice,"Walmart has been on the leading edge of the move to integrate RFID technology into the supply chain. The major opportunity at this time for RFID technology is to reduce out-of-stock situations ____.","between the manufacturer and the storeroom at the individual store|between the manufacturer and the distribution centers|between the distribution centers and the storeroom at the individual store|between the backroom stock area and the store shelves",3
+286,single_choice,"In an initial trial of radio frequency identification (RFID) tags on garments in 2007, American Apparel found that inventory shrinkage, a reduction in inventory, was 20 percent, double the retail industry average. The inventory shrinkage was a result of ____.","Employee theft|being soft on shoplifting|lax internal controls over shipping and delivery|all of the above",3
+287,single_choice,"In the accompanying SAP Business Intelligence (BI) Framework figure, the center section represents the analytical capabilities of BI. In SAP's framework, analytic applications are ____.","a set of tools for exploration, analysis, and presentation that can be applied to a wide range of business questions|data analysis tools applied to specific industries, such as financial services, manufacturing, consumer products, retail, and utilities or to functional areas, such as supply chain management, finance, human resources, IT, and service, sales, and marketing|business and technology functions that manage information as a corporate asset|used to store the large volumes of data used in the analysis",1
+288,single_choice,"In the accompanying SAP Business Intelligence (BI) Framework figure, the center section represents the analytical capabilities of BI. In SAP's framework, enterprise performance management is ____.","a set of tools for exploration, analysis, and presentation that can be applied to a wide range of business questions|the data analysis tools applied to specific industries, such as financial services, manufacturing, consumer products, retail, and utilities or to functional areas, such as supply chain management, finance, human resources, IT, and service, sales, and marketing|business and technology functions that manage information as a corporate asset|the concept of developing strategic goals for the organization and then gathering data to evaluate how the organization is performing in relation to those goals",3
+289,single_choice,"In the accompanying SAP Business Intelligence (BI) Framework figure, the center section represents the analytical capabilities of BI. In SAP's framework, enterprise information management is a relatively new term that describes ____.","a set of tools for exploration, analysis, and presentation that can be applied to a wide range of business questions|data analysis tools applied to specific industries, such as financial services, manufacturing, consumer products, retail, and utilities or to functional areas, such as supply chain management, finance, human resources, IT, and service, sales, and marketing|business and technology functions that manage information as a corporate asset|the concept of developing strategic goals for the organization and then gathering data to evaluate how the organization is performing in relation to those goals",2
+290,single_choice,"The primary performance measure for data storage systems is latency. Latency is defined as ____.","the time between when a request is made for data from a storage device and when the data is delivered|the time required for the BI system to finish analyzing specified data that is gathered|the difference between the time required to access data from memory and the time required to access data from a hard disk|the time between when the BI system finishes analyzing specified data and the time that resulting analysis is displayed on the monitor",0
+291,single_choice,"What is the minimum acceptable rate of return on a project that a company will accept?","running rate|recount rate|hurdle rate|mortgage rate|None of the above",2
+292,single_choice,"What is known as the combination of software tools that lets various programs within an organization communicate with other applications?","Web services|Internet hot links|Internet tie-ins|Binders",0
+293,single_choice,"What is defined as the delivery of a software product to a user via the Internet?","Web services|Cloud computing|Mobile computing|Service-oriented computing",1
+294,single_choice,"What is a way to figure out whether an investment is profitable, and to address the time value of money?","Exchange rate|Real-time business intelligence|Net present value (NPV)|Hurdle rate",2
+295,single_choice,"Technologies such as radio frequency identification (RFID) and smartphones are fueling explosive growth in the amount of data available for businesses to process. This data can provide real business value, but the challenge is ____.","how to deliver the data to resources for analysis|how to store and protect the data against loss|how to manage and evaluate the data to gain business knowledge|All of the above",2
+296,single_choice,"SAP is not the only ERP provider with in-memory capability. In February 2012, Oracle released its in-memory solution for business analytics called ____.","NetWeaver|Duet|Internet Transaction Service (ITS)|Exalytics",3
+297,single_choice,"Which type of mobile device is being used more frequently to provide traffic information services that may use static sensors or traffic cameras to augment built-in maps (to avoid accidents and rush-hour traffic)?","GPS devices|Smartphones|PDAs|Netbooks",1
+298,single_choice,"SAP's NetWeaver platform is a collection of modules. Which module gives users complete access to all their work on a single screen, using links to connect users to all the major applications needed to perform their jobs?","Enterprise Portal|Mobile Infrastructure|Master Data Management|Exchange Structure",0
+299,single_choice,"On the left side of the accompanying SAP Business Intelligence (BI) Framework figure are the potential BI ____________________, which are growing both in number and in the volume of data produced. For example, Facebook, Twitter, and other social media applications can provide information on consumer reaction to new products.","data source",0
+300,single_choice,"The technology that is becoming an increasingly efficient tool for tracking items through a supply chain is ______________________.","radio frequency identification RFID",0
+301,single_choice,"Business intelligence (BI) is a term used to describe a range of different applications and technologies used to extract and analyze large amounts of data to aid in decision making, is also referred to as ______________________.","business analytics",0
+302,single_choice,"Data stored in data warehouse servers usually consist of aggregated data - from an ERP system or other sources. To speed access to this data, the data in a data warehouse are structured as _____________________, which allow for relationships in the data to be analyzed quickly.","multidimensional data cubes",0

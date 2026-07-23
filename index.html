@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT & Business Systems Review - Portal Dashboard</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/jpeg" href="../assets/img/Logo.jpg" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Background Glass Orbs -->
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    <div class="glass-orb orb-3"></div>
+
+    <!-- App Container -->
+    <div class="app-container">
+
+        <!-- Top Navigation / Header (Gamified Scholar Dashboard) -->
+        <header class="app-header glass-panel personalized-header">
+            <!-- Left: Shortcuts & Settings -->
+            <div class="header-left-group" style="display: flex; align-items: center; gap: 12px;">
+                <button class="shortcut-pill-btn" title="View Starred Questions (12)">
+                    <span class="star-icon">★</span>
+                    <span class="shortcut-count">12</span>
+                </button>
+
+                <button id="theme-toggle-btn" class="action-icon-btn" title="Toggle Theme (Dark/Light)">
+                    <svg id="theme-icon-sun" class="theme-icon hidden" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="theme-icon-moon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Center: Spacer -->
+            <div class="header-center-widgets"></div>
+
+            <!-- Right: Profile Box -->
+            <div class="header-actions">
+                <div class="user-greeting-box" style="display: flex; align-items: center; gap: 12px;">
+                    <div class="greeting-text" style="text-align: right;">
+                        <div class="user-title-row" style="justify-content: flex-end;">
+                            <h2>Welcome back, <span class="highlight-name">Alex</span> 👑</h2>
+                            <span class="profile-level-badge mini-level">Lvl. 6</span>
+                        </div>
+                        <p class="user-meta">🎓 B.S. in MIS</p>
+                    </div>
+                    <div class="user-avatar-ring">
+                        <img src="https://ui-avatars.com/api/?name=Alex+Dung&background=3b82f6&color=fff&bold=true"
+                            alt="Alex Dung">
+                        <span class="status-indicator active" title="Online & Studying"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="home-container">
+
+            <!-- Hero Section with Centered Search Bar -->
+            <section class="hero-section">
+                <h1 class="hero-title">Explore Study & Exam Portals</h1>
+                <p class="hero-subtitle">
+                    Select a course to access interactive review banks, practice mode with real-time feedback, and timed
+                    mock exams designed for high distinction mastery.
+                </p>
+
+                <!-- Centered Search Box -->
+                <div class="hero-search-container">
+                    <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="course-search-input" class="hero-search-input"
+                        placeholder="Search courses by code, title, or topic (ITA301, ISM302)...">
+                </div>
+            </section>
+
+            <!-- 4-Column Course Grid -->
+            <section id="course-grid" class="course-grid">
+
+                <!-- Box 1: ITA301 (Active) -->
+                <div class="course-card active-course" data-code="ITA301" data-title="IT Systems & Applications"
+                    data-keywords="it foundations enterprise decision support databases e-commerce practice exam">
+                    <div>
+                        <div class="course-header">
+                            <span class="course-code">ITA301</span>
+                            <span class="course-status status-active">● Active Portal</span>
+                        </div>
+                        <h2 class="course-title">ITA301 - Information System Design & Analysis</h2>
+                        <p class="course-desc">
+                            This course aims to explain to students all aspects of analysis and design an information
+                            system. Students will learn how to translate business requirements into information systems
+                            that support a company’s strategic objectives.
+                        </p>
+                        <div class="course-meta-pills">
+                            <span class="meta-pill">300 Questions</span>
+                            <span class="meta-pill">True / False</span>
+                            <span class="meta-pill">Multiple Choice</span>
+                            <span class="meta-pill">Fill in Blank</span>
+                        </div>
+                    </div>
+                    <a href="ita301/ita.html" class="course-action-btn btn-launch">
+                        <span>Launch Study Portal</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Box 2: ISM302 (Active) -->
+                <div class="course-card active-course" data-code="ISM302" data-title="Information Systems Management"
+                    data-keywords="strategic it governance risk digital transformation leadership case studies">
+                    <div>
+                        <div class="course-header">
+                            <span class="course-code">ISM302</span>
+                            <span class="course-status status-active">● Active Portal</span>
+                        </div>
+                        <h2 class="course-title">ISM302 - Enterprise Resource Planning</h2>
+                        <p class="course-desc">
+                            This course focuses on teaching the core concepts, business processes, and management of ERP
+                            systems (like SAP or Odoo) to integrate data across finance, supply chain, and HR.
+                        </p>
+                        <div class="course-meta-pills">
+                            <span class="meta-pill">302 Questions</span>
+                            <span class="meta-pill">True / False</span>
+                            <span class="meta-pill">Multiple Choice</span>
+                            <span class="meta-pill">Fill in Blank</span>
+                        </div>
+                    </div>
+                    <a href="ism302/ism.html" class="course-action-btn btn-launch">
+                        <span>Launch Study Portal</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Box 3: IMO301c (Coming Soon) -->
+                <div class="course-card coming-soon" data-code="IMO301c" data-title="Innovation & Tech Management"
+                    data-keywords="innovation management research development technology cycles disruption strategy">
+                    <div>
+                        <div class="course-header">
+                            <span class="course-code">IMO301c</span>
+                            <span class="course-status status-soon">○ Coming Soon</span>
+                        </div>
+                        <h2 class="course-title">IMO301c - Innovation & Tech Management</h2>
+                        <p class="course-desc">
+                            Explore technological innovation cycles, R&D management strategies, disruptive technology
+                            adoption, and corporate venturing in modern tech markets.
+                        </p>
+                        <div class="course-meta-pills">
+                            <span class="meta-pill">180 Questions</span>
+                            <span class="meta-pill">Innovation Strategy</span>
+                            <span class="meta-pill">R&D</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn btn-disabled" disabled>
+                        <span>Bank Under Development</span>
+                    </button>
+                </div>
+
+                <!-- Box 4: ITE302c (Coming Soon) -->
+                <div class="course-card coming-soon" data-code="ITE302c" data-title="E-Commerce & Digital Business"
+                    data-keywords="e-commerce digital business models payment gateways seo marketing analytics online trade">
+                    <div>
+                        <div class="course-header">
+                            <span class="course-code">ITE302c</span>
+                            <span class="course-status status-soon">○ Coming Soon</span>
+                        </div>
+                        <h2 class="course-title">ITE302c - E-Commerce & Digital Business</h2>
+                        <p class="course-desc">
+                            Review modern e-commerce architectures, digital marketing ecosystems, online payment
+                            security, search engine optimization, and web data analytics.
+                        </p>
+                        <div class="course-meta-pills">
+                            <span class="meta-pill">220 Questions</span>
+                            <span class="meta-pill">Digital Business</span>
+                            <span class="meta-pill">E-Trade</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn btn-disabled" disabled>
+                        <span>Bank Under Development</span>
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Empty Search Results Message (Hidden by default) -->
+            <div id="no-course-results" class="glass-panel hidden" style="text-align: center; padding: 48px;">
+                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 8px;">No Courses Found</h3>
+                <p style="color: var(--text-secondary);">No course portals match your search keywords. Try searching for
+                    a course code like "ITA301" or general terms.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Home Page Logic: Theme Switcher & Real-time Course Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Theme Initialization from LocalStorage
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            const sunIcon = document.getElementById('theme-icon-sun');
+            const moonIcon = document.getElementById('theme-icon-moon');
+
+            let darkMode = true;
+            try {
+                const storedTheme = localStorage.getItem('it_review_dark_mode');
+                if (storedTheme !== null) {
+                    darkMode = JSON.parse(storedTheme);
+                }
+            } catch (e) {
+                console.warn('LocalStorage error:', e);
+            }
+
+            const applyTheme = () => {
+                if (darkMode) {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('light-theme');
+                    sunIcon.classList.remove('hidden');
+                    moonIcon.classList.add('hidden');
+                } else {
+                    document.body.classList.add('light-theme');
+                    document.body.classList.remove('dark-theme');
+                    sunIcon.classList.add('hidden');
+                    moonIcon.classList.remove('hidden');
+                }
+            };
+
+            applyTheme();
+
+            themeBtn.addEventListener('click', () => {
+                darkMode = !darkMode;
+                applyTheme();
+                try {
+                    localStorage.setItem('it_review_dark_mode', JSON.stringify(darkMode));
+                } catch (e) { }
+            });
+
+            // 2. Real-time Course Search Filtering
+            const searchInput = document.getElementById('course-search-input');
+            const courseCards = document.querySelectorAll('.course-card');
+            const noResultsBox = document.getElementById('no-course-results');
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.trim().toLowerCase();
+                let matchCount = 0;
+
+                courseCards.forEach(card => {
+                    const code = (card.getAttribute('data-code') || '').toLowerCase();
+                    const title = (card.getAttribute('data-title') || '').toLowerCase();
+                    const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+
+                    if (!query || code.includes(query) || title.includes(query) || keywords.includes(query)) {
+                        card.style.display = 'flex';
+                        matchCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (matchCount === 0) {
+                    noResultsBox.classList.remove('hidden');
+                } else {
+                    noResultsBox.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

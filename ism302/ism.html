@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM302 - Information Systems Management Review</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Background Glass Orbs -->
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    <div class="glass-orb orb-3"></div>
+
+    <!-- App Container -->
+    <div class="app-container">
+
+        <!-- Top Navigation / Header (Gamified Scholar Dashboard) -->
+        <header class="app-header glass-panel personalized-header">
+            <!-- Left: Back Button, Stats & Feature Actions -->
+            <div class="header-left-group" style="display: flex; align-items: center; gap: 14px;">
+                <a href="../index.html" class="back-home-btn" title="Return to Course Dashboard">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="stats-pill glass-subpanel">
+                    <div class="stat-item">
+                        <span class="stat-label">Reviewed</span>
+                        <span id="stat-reviewed" class="stat-value">0 / 302</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-label">Correct Rate</span>
+                        <span id="stat-accuracy" class="stat-value">0%</span>
+                    </div>
+                </div>
+
+                <button id="reset-progress-btn" class="action-icon-btn" title="Reset All Progress">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                        <path d="M3 3v5h5"></path>
+                    </svg>
+                </button>
+
+                <button id="theme-toggle-btn" class="action-icon-btn" title="Toggle Theme (Dark/Light)">
+                    <svg id="theme-icon-sun" class="theme-icon hidden" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="theme-icon-moon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Center: Mode Selector Pills -->
+            <div class="header-center-widgets">
+                <div class="mode-selector">
+                    <button id="mode-practice-btn" class="mode-pill active">
+                        <span class="pill-icon">💡</span> Practice Mode
+                    </button>
+                    <button id="mode-exam-btn" class="mode-pill">
+                        <span class="pill-icon">⏱️</span> Exam Mode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: User Identity / Profile -->
+            <div class="header-actions">
+                <div class="user-greeting-box" style="display: flex; align-items: center; gap: 12px;">
+                    <div class="greeting-text" style="text-align: right;">
+                        <div class="user-title-row" style="justify-content: flex-end;">
+                            <h2><span class="highlight-name">Alex Dung</span> 👑</h2>
+                            <span class="profile-level-badge mini-level">Lvl. 6</span>
+                        </div>
+                        <p class="user-meta">ISM302</p>
+                    </div>
+                    <div class="user-avatar-ring">
+                        <img src="https://ui-avatars.com/api/?name=Alex+Dung&background=3b82f6&color=fff&bold=true" alt="Alex Dung">
+                        <span class="status-indicator active" title="Online & Studying"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Workspace Grid (Main Content on left, Sidebar on right) -->
+        <main class="workspace-grid">
+
+            <!-- Main Content Area: Question Display / Exam Panel -->
+            <section class="main-content">
+
+                <!-- Question Card -->
+                <div id="question-card" class="question-card glass-panel">
+
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <div class="card-meta">
+                            <span id="question-number-badge" class="number-badge">Question #1</span>
+                            <span id="question-type-badge" class="type-badge">TRUE / FALSE</span>
+                        </div>
+                        <button id="favorite-toggle-btn" class="favorite-btn" title="Toggle Favorite">
+                            <span class="star-icon">☆</span>
+                        </button>
+                    </div>
+
+                    <!-- Question Body -->
+                    <div class="card-body">
+                        <h2 id="question-text" class="question-text">Loading question content...</h2>
+
+                        <!-- Interactive Options Container -->
+                        <div id="options-container" class="options-container">
+                            <!-- Dynamically populated with options (True/False buttons, Multiple Choice options, or Fill in the Blank input) -->
+                        </div>
+                    </div>
+
+                    <!-- Feedback Box (Hidden by default) -->
+                    <div id="feedback-box" class="feedback-box hidden">
+                        <div class="feedback-header">
+                            <span id="feedback-status-icon" class="feedback-icon">✓</span>
+                            <h3 id="feedback-title" class="feedback-title">Correct!</h3>
+                        </div>
+                        <p id="feedback-explanation" class="feedback-explanation"></p>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="card-footer">
+                        <div class="footer-left">
+                            <button id="prev-question-btn" class="nav-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                Previous
+                            </button>
+                        </div>
+
+                        <div class="footer-center">
+                            <!-- Practice Mode specific actions -->
+                            <div id="practice-actions" class="action-group">
+                                <button id="reveal-answer-btn" class="secondary-btn">Reveal Answer</button>
+                            </div>
+                        </div>
+
+                        <div class="footer-right">
+                            <button id="next-question-btn" class="nav-btn primary-nav-btn">
+                                Next
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exam Session Bar (Hidden unless in Exam Mode) -->
+                <div id="exam-controls" class="exam-controls glass-panel hidden">
+                    <div class="exam-status">
+                        <span class="exam-timer">⏱️ Time Remaining: <strong
+                                id="exam-timer-display">45:00</strong></span>
+                        <span class="exam-progress-text">Answered: <strong id="exam-answered-count">0 /
+                                30</strong></span>
+                    </div>
+                    <button id="submit-exam-btn" class="submit-exam-btn">Submit Exam & View Results</button>
+                </div>
+
+                <!-- Exam Results Modal / Card (Hidden by default) -->
+                <div id="exam-results-card" class="exam-results-card glass-panel hidden">
+                    <div class="results-header">
+                        <h2>Exam Session Complete</h2>
+                        <div id="exam-score-circle" class="score-circle">
+                            <span id="exam-score-percentage">85%</span>
+                            <span class="score-subtext">Score</span>
+                        </div>
+                    </div>
+                    <div class="results-breakdown">
+                        <div class="breakdown-stat">
+                            <span class="stat-label">Total Questions</span>
+                            <span id="res-total" class="stat-value">30</span>
+                        </div>
+                        <div class="breakdown-stat">
+                            <span class="stat-label">Correct Answers</span>
+                            <span id="res-correct" class="stat-value correct-color">25</span>
+                        </div>
+                        <div class="breakdown-stat">
+                            <span class="stat-label">Incorrect Answers</span>
+                            <span id="res-incorrect" class="stat-value incorrect-color">5</span>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <button id="review-exam-btn" class="secondary-btn">Review Incorrect Answers</button>
+                        <button id="retake-exam-btn" class="primary-btn">Start New Exam</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Sidebar: Question Navigation & Filters (On Right side) -->
+            <aside class="sidebar glass-panel">
+                <div class="sidebar-header">
+                    <h2>Question Bank</h2>
+                    <span id="filtered-count-badge" class="count-badge">302</span>
+                </div>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="question-search-input" placeholder="Search questions (e.g. governance, risk)...">
+                    <button id="clear-search-btn" class="clear-search hidden" title="Clear search">×</button>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="filter-pills">
+                    <button class="filter-pill active" data-filter="all">All <span
+                            class="filter-count">302</span></button>
+                    <button class="filter-pill" data-filter="true_false">T/F <span
+                            class="filter-count">0</span></button>
+                    <button class="filter-pill" data-filter="single_choice">Choice <span
+                            class="filter-count">0</span></button>
+                    <button class="filter-pill" data-filter="fill_blank">Fill <span
+                            class="filter-count">0</span></button>
+                    <button class="filter-pill star-filter" data-filter="favorites">★ Favorites <span
+                            id="favorite-filter-count" class="filter-count">0</span></button>
+                </div>
+
+                <!-- Legend / Status indicator info -->
+                <div class="sidebar-legend">
+                    <span class="legend-item"><span class="legend-dot status-unanswered"></span> Unanswered</span>
+                    <span class="legend-item"><span class="legend-dot status-correct"></span> Correct</span>
+                    <span class="legend-item"><span class="legend-dot status-incorrect"></span> Incorrect</span>
+                </div>
+
+                <!-- Question Grid Container -->
+                <div class="sidebar-grid-scroll">
+                    <div id="question-grid" class="question-grid">
+                        <!-- Question buttons generated dynamically via JS -->
+                        <div class="grid-loading">Loading question bank...</div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Fallback File Selector Modal (For CORS restriction mitigation when opened via file://) -->
+    <div id="file-selector-modal" class="modal-overlay hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <div class="modal-icon">📁</div>
+                <h2>Load Question Bank (questions_ism.csv)</h2>
+            </div>
+            <div class="modal-body">
+                <p>Because you opened this application directly from your local file system (`file://`), web browser
+                    security policies block automatic loading of `questions_ism.csv`.</p>
+                <p>Please select the <strong>questions_ism.csv</strong> file located in this folder to launch the
+                    interactive study platform:</p>
+
+                <label for="csv-file-input" class="file-drop-area">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <span id="file-upload-label">Click or drop questions_ism.csv here</span>
+                    <input type="file" id="csv-file-input" accept=".csv" class="file-input">
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="load-csv-btn" class="primary-btn" disabled>Launch Platform</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Logic -->
+    <script src="app_ism.js"></script>
+</body>
+
+</html>

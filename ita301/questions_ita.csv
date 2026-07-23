@@ -1,0 +1,300 @@
+id,type,question,options,correctAnswer
+1,true_false,"Most firms give their IT budgets a low priority in good economic times","True|False",1
+2,true_false,"A mission-critical system is one that is unimportant to a company's operation","True|False",1
+3,true_false,"In an information system, data is information that has been transformed into input that is valuable to users.","True|False",1
+4,true_false,"Transaction processing (TP) system are inefficient because they process a set of transaction-related commands individually rather than as group","True|False",1
+5,true_false,"Most lage companies require systems that combine transaction processng, business support, knowledge management, and user productivity features","True|False",0
+6,true_false,"Since middle managers focus on a longer time frame, they need less detailed information than tip managers, but somewhat more than supervisors who oversee day-to-day operations","True|False",1
+7,true_false,"Many companies find that a trend called empowerment, which gives employees more responsibility and accountablility, improves employee motivation and increases customer satisfaction","True|False",0
+8,true_false,"Network administration includes hardware and software maintanance, support, and security","True|False",0
+9,true_false,"In a knowledge management system, a knowledge base consists of logical rules that identify data patterns and relationships.","True|False",1
+10,true_false,"The responsibilities of a systems analyst at a small firm are exactly the same as those at a large corporation.","True|False",1
+11,true_false,"Tools make it easier to build an information system, thereby boosting IT productivity and improving the quality of the finished product.","True|False",0
+12,true_false,"After developing a model, many CASE tools can generate program code, which impedes and slows down the implementation process.","True|False",1
+13,true_false,"Application software consists of programs that support day-to-day business functions and provide users with the information they need.","True|False",0
+14,true_false,"User support provides users with technical information, training, and productivity support.","True|False",0
+15,true_false,"Assistive technology refers to the combination of hardware, software, and services that people use to manage, communicate, and share information.","True|False",1
+16,true_false,"A large concentration of networked computers working together is called a data ranch.","True|False",1
+17,true_false,"System software controls the flow of data, provides data security, and manages network operations.","True|False",0
+18,true_false,"Examples of company-wide applications, called legacy applications, include order processing systems, payroll systems, and company communications networks.","True|False",1
+19,true_false,"Hardware consists of everything in the physical layer of the information system.","True|False",0
+20,true_false,"When planning an information system, a company must consider how a new system will interface with older systems, which are called horizontal systems.","True|False",1
+21,true_false,"Traditional relational models are still used, but so-called NoSQL databases are gaining in popularity due to their ability to scale to extremely large and unstructured datasets.","True|False",0
+22,true_false,"On mobile devices, the user interacts with the system with an app, but the same back-end services are accessed as when the user interacts with a web page.","True|False",0
+23,true_false,"A business profile is a specific set of transactions, events, and results that can be described and documented.","True|False",1
+24,true_false,"Business process modeling notation (BPMN) includes standard shapes and symbols to represent events, processes, workflows, and more.","True|False",0
+25,true_false,"When one is using a transaction processing system, if a single element of a transaction fails, the system will skip the corrupt element and continue to process the rest of the transaction.","True|False",1
+26,true_false,"When companies first installed word processing systems, managers expected to reduce the number of employees as office efficiency increased.","True|False",0
+27,true_false,"Knowledge workers and team leaders are included in the top level of the organizational model.","True|False",1
+28,true_false,"The waterfall model emphasizes interactivity among the phases.","True|False",1
+29,true_false,"Object-oriented methods provide an easy transition to O-O programming languages such as C++, Java, and Swift.","True|False",0
+30,true_false,"The structure of the IT department varies among companies, as do its name and placement within the organization.","True|False",0
+31,single_choice,"When planning an information system, a company must consider how a new system will interface with older systems, which are called .","enterprise applications|network operating systems (NOS)|operating applications|legacy systems",3
+32,single_choice,"Internet-based commerce is called and includes two main sectors: B2C (business-to-consumer) and B2B (business-to-business).","electronic commerce|network-oriented commerce|virtual trading|online trading",0
+33,single_choice,"Which is one of the main sectors of ecommerce?","C2C (consumer-to-consumer)|B2C (business-to-consumer)|C2B (consumer-to-business)|BPM (business process model)",1
+34,single_choice,"__________ enabled computer-to-computer transfer of data between companies, usually over private telecommunications networks.","Electronic data interchange (EDI)|Radio frequency identification (RFID)|Enterprise resource planning (ERP)|Object-oriented (O-O) analysis",0
+35,single_choice,"A ______ is an overview that describes a company's overall functions, processes, organization, products, services, customers, suppliers, competitors, constraints, and future direction.","business matrix|business profile|business index|business glossary",1
+36,single_choice,"A _______ graphically displays one or more business processes, such as handling an airline reservation, filling a product order, or updating a customer account.","business matrix model (BMM)|business process model (BPM)|business indexing model (BIM)|business strategic model (BSM)",1
+37,single_choice,"For complex models, analysts can choose computer-based modeling tools that use ___________ , which includes standard shapes and symbols to represent events, processes, workflows, and more.","electronic data interchange (EDI)|joint application development (JAD)|business process modeling notation (BPMN)|rapid application development (RAD)",2
+38,single_choice,"Transaction processing (TP) systems _____________.","provide job-related information to users at all levels of a company|simulate human reasoning by combining a knowledge base and inference rules that determine how the knowledge is applied|process data generated by day-to-day business operations|include email, voice mail, fax, video conferencing, word processing, automated calendars, database management, spreadsheets, and integrated mobile computing systems",2
+39,single_choice,"Business support systems _____________.","provide job-related information support to users at all levels of a company|simulate human reasoning by combining a knowledge base and inference rules that determine how the knowledge is applied|process data generated by day-to-day business operations|include email, voice mail, fax, video conferencing, word processing, automated calendars, database management, spreadsheets, and integrated mobile computing systems",0
+40,single_choice,"____________ technology uses high-frequency radio waves to track physical objects.","Redundant array of independent disks (RAID)|Radio frequency identification (RFID)|Enterprise resource planning (ERP)|Management information system (MIS)",1
+41,single_choice,"Knowledge management systems use a large database called a(n) ___________ that allows users to find information by entering keywords or questions in normal English phrases.","inference engine|knowledge base|knowledge database management system|inference manager",1
+42,single_choice,"User productivity systems _____________.","provide job-related information to users at all levels of a company|simulate human reasoning by combining a knowledge base and inference rules that determine how the knowledge is applied|process data generated by day-to-day business operations|include groupware programs that enable users to share data, collaborate on projects, and work in teams",3
+43,single_choice,"In a typical organizational model, top managers ___________.","develop long-range plans, called strategic plans, which define a company's overall mission and goals|provide direction, necessary resources, and performance feedback to supervisors and team leaders|oversee operation employees and carry out day-to-day functions, coordinating operational tasks and people|include users who rely on transaction processing (TP) systems to enter and receive the data they need to perform their jobs",0
+44,single_choice,"In a typical company organizational model, middle managers ______________.","develop long-range plans, called strategic plans, which define the company's overall mission and goals|provide direction, necessary resources, and performance feedback to supervisors and team leaders|oversee operation employees and carry out day-to-day functions, coordinating operational tasks and people|include users who rely on transaction processing (TP) systems to enter and receive the data they need to perform their jobs",1
+45,single_choice,"__________ is a systems development technique that produces a graphical representation of a concept or process that systems developers can analyze, test, and modify.","Prototyping|Rapid application development|Scrum|Modeling",3
+46,single_choice,"A ___________ describes the information that a system must provide.","process model|data model|business model|network model",2
+47,single_choice,"____________ is a systems development technique that tests system concepts and provides an opportunity to examine input, output, and user interfaces before final decisions are made.","Scrum|Prototyping|Modeling|Rapid application development",1
+48,single_choice,"Identify a method of developing systems that is well-suited to traditional project management tools and techniques.","Object-oriented analysis|Adaptive method|Structured analysis|Rapid application development",2
+49,single_choice,"The ___________ method of developing systems produces code that is modular and reusable.","object-oriented analysis|adaptive|structured analysis|rapid application development",0
+50,single_choice,"Which method of system development stresses intense team-based effort and reflects a set of community-based values?","Object-oriented analysis|Agile method|Structured analysis|Rapid application development",1
+51,single_choice,"One of the disadvantages of ____________ methods of system development is that the overall project might be subject to scope change as user requirements change.","object-oriented analysis|agile|structured analysis|rapid application development",1
+52,single_choice,"Structured analysis is a traditional systems development technique that uses a series of phases, called the _______________ , to plan, analyze, design, implement, and support an information system.","object-oriented (O-O) analysis|systems development life cycle (SDLC)|transaction processing (TP) system|enterprise resource planning system (ERP)",1
+53,single_choice,"Structured analysis is called a(n) ___________ technique because it focuses on processes that transform data into useful information.","iterative|process-centered|inferred|model-specific",1
+54,single_choice,"A(n) __________ shows the data that flow in and out of system processes.","process model|object model|business model|network model",0
+55,single_choice,"A(n) __________ uses various symbols and shapes to represent data flow, processing, and storage.","process flow diagram|object model|data flow diagram|network model",2
+56,single_choice,"In a(n) ___________ model, the result of each phase is called a deliverable, which flows into the next phase.","interactive|iterative|waterfall|spiral",2
+57,single_choice,"The __________ usually begins with a formal request to the IT department, called a systems request, which describes problems or desired changes in an information system or a business process.","systems design phase|systems planning phase|systems support and security phase|systems analysis phase",1
+58,single_choice,"In a systems development life cycle (SDLC) model, the purpose of the _____________ is to build a logical model of the new system.","systems analysis phase|systems implementation phase|systems design phase|systems support and security phase",0
+59,single_choice,"In a systems development life cycle (SDLC) model, the purpose of the ___________ is to create a physical model that will satisfy all documented requirements for the system.","systems implementation phase|systems planning phase|systems analysis phase|systems design phase",3
+60,single_choice,"During the __________ of the systems development life cycle (SDLC), a new system is constructed.","systems planning phase|systems support and security phase|systems design phase|systems implementation phase",3
+61,single_choice,"The systems implementation phase of the systems development life cycle (SDLC) includes an assessment, called a ____________ , to determine whether the system operates properly and if costs and benefits are within expectation.","systems estimation|systems verification|systems validation|systems evaluation",3
+62,single_choice,"During the _____________ of the systems development life cycle (SDLC), the IT staff maintains, enhances, and protects the system.","systems support and security phase|systems implementation phase|systems analysis phase|systems planning phase",0
+63,single_choice,"In object-oriented analysis, objects possess characteristics called ______________.","properties|orientations|classes|inheritances",0
+64,single_choice,"In object-oriented analysis, an object is a member of a(n) _______________, which is a collection of similar objects.","property|class|message|instance",1
+65,single_choice,"In object-oriented design, built-in processes called ______________ can change an object's properties.","methods|functions|attributes|features",0
+66,single_choice,"Agile methods typically use a(n) _______________, which represents a series of iterations based on user feedback.","incremental model|extreme model|spiral model|evaluative model",2
+67,single_choice,"The ______________ group typically provides leadership and overall guidance, but the systems themselves are developed by teams consisting of users, managers, and IT staff members.","web support|application development|systems support|database administration",1
+68,single_choice,"_________________ provides vital protection and maintenance services for system hardware and software, including enterprise computing systems, networks, transaction processing systems, and corporate IT infrastructure.","User support|Database administration|Systems support and security|Network administration",2
+69,single_choice,"A ________________ answers questions, troubleshoots problems, and serves as a clearinghouse for user problems and solutions.","user support specialist|database administrator|web support specialist|network administrator",0
+70,single_choice,"_________________ design and construct web pages, monitor traffic, manage hardware and software, and link web-based applications to a company's information systems.","User support specialists|Database administrators|Web support specialists|Network administrators",2
+71,single_choice,"Many large IT departments use a(n) ____________ team that reviews and tests all applications and systems changes to verify specifications and software quality standards.","beta testing|quality assurance|alpha testing|acceptance verifier",1
+72,single_choice,"A(n) _______________ investigates, analyzes, designs, develops, installs, evaluates, and maintains a company's information systems.","application developer|database administrator|network administrator|systems analyst",3
+73,single_choice,"Many hardware and software companies offer _____________ for IT professionals, which verifies that an individual demonstrated a certain level of knowledge and skill on a standardized test.","spot identification|certification|education|accreditation",1
+74,single_choice,"Roark has just joined a company and in his role as a lead analyst, he will be responsible for determining which systems development method the team uses to create a new application for a major medical supplier. After spending a week getting to know the members of the team, including their strengths and weaknesses, and what has worked well (and not so well) for this particular team in the past, Roark realizes that one theme keeps recurring: the team has particularly weak communications skills. Which method is Roark least likely to use, given that he knows about the disadvantages of each method?","Structured analysis|Agile/adaptive methods|Object-oriented analysis|Rapid application development",1
+75,single_choice,"Roark has just joined a company and in his role as a lead analyst, he will be responsible for determining which systems development method the team uses to create a new application for a major medical supplier. It is a new day at the firm. Roark has been in place for a few weeks, strengthening the communications skills of his employees, getting them to work much better together. Now, the challenge that he faces is not an internal one; it lies with the client, which is increasingly incapable of sticking with decisions. Roark, based on his past experience with other clients like this, is afraid that the client will throw them a curveball and want to make changes late in the game—but that they also will be unwilling to absorb the costs of those changes. For this reason, which method of development will Roark eliminate?","Structured analysis|Agile/adaptive methods|Object-oriented analysis|Rapid application development",1
+76,true_false,"Systems requests do not deal with factors involved in improving service.","True|False",1
+77,true_false,"Internal and external factors affect every business decision that a company makes, and IT systems are no exception","True|False",0
+78,true_false,"A strategic plan that stresses technology tends to create an unfavorable climate for IT projects that extends throughout an organization.","True|False",1
+79,true_false,"As users rely more heavily on information systems to perform their jobs, they are likely to request even more IT services and support.","True|False",0
+80,true_false,"Information systems that interact with customers usually receive low priority.","True|False",1
+81,true_false,"Economic activity has a negligible influence on corporate information management.","True|False",1
+82,true_false,"Most large companies rely on one person to evaluate systems requests instead of relying on a systems review committee.","True|False",1
+83,true_false,"When assessing schedule feasibility, a systems analyst must consider the interaction between time and costs.","True|False",0
+84,true_false,"Feasibility analysis is an ongoing task that must be performed throughout the systems development process.","True|False",0
+85,true_false,"The purpose of an interview, and of the preliminary investigation itself, is to convince others that a project is justified, not to uncover facts.","True|False",1
+86,true_false,"It is easier to assign dollar values to intangible than to tangible benefits.","True|False",1
+87,true_false,"The Pareto chart, sometimes called a scatter diagram, is a problem-solving tool.","True|False",1
+88,true_false,"In a preliminary investigation report, the findings section includes a summary of a project request and a specific recommendation.","True|False",1
+89,true_false,"The letters SWOT stand for spending, weeks, overtures, and time.","True|False",1
+90,true_false,"A SWOT analysis examines a firm's technical, human, and financial resources.","True|False",0
+91,true_false,"A CASE tool can be used to define and document an overall environment.","True|False",0
+92,true_false,"Irrespective of the development strategy used, many organizations still rely on the IT group to provide guidance when it comes to selecting tools to support strategic planning activities.","True|False",0
+93,true_false,"Because significant resources are required, team leaders usually initiate large-scale projects.","True|False",1
+94,true_false,"Errors or problems in existing systems can trigger requests for systems projects.","True|False",0
+95,true_false,"In most organizations, the IT department receives fewer systems requests than it can actually handle.","True|False",1
+96,true_false,"Many smaller companies rely on one person to evaluate system requests instead of a committee","True|False",0
+97,true_false,"If a request is feasible, it is said to be necessary.","True|False",1
+98,true_false,"Adding a report required by a new federal law is an example of a discretionary project.","True|False",1
+99,true_false,"A constraint can involve hardware, software, time, policy, law, or cost.","True|False",0
+100,true_false,"A survey is as flexible as a series of interviews, but it is more expensive.","True|False",1
+101,true_false,"The Internet-of-Things (IOT) involves almost all electronic devices communicating with one another over a computer network.","True|False",0
+102,true_false,"Quick Response codes contain more information than traditional bar codes, but less than RFID tags.","True|False",0
+103,true_false,"A new website that enhances the company's image is an example of a tangible benefit.","True|False",1
+104,true_false,"Projects that adopt agile methodology are not prone to the typical rapid changes that occur throughout the system development lifecycle.","True|False",1
+105,fill_blank,"The term _____ refers to the reasons, or justifications, for a proposal.","","Business Case"
+106,fill_blank,"Systems development typically starts with a _____.","","System Request"
+107,fill_blank,"_____ planning is the process of identifying long-term organizational goals, strategies, and resources.","","Strategic"
+108,fill_blank,"Strategic planning starts with a _____ that reflects a firm's vision, purpose, and values.","","Mission Statement"
+109,fill_blank,"_____ usually focus on long-term challenges and goals, the importance of a firm's stakeholders, and a commitment to the firm's role as a corporate citizen.","","Mission Statement"
+110,fill_blank,"A _____ must be achieved to fulfill a company's mission","","Critical success factor"
+111,fill_blank,"The overall aim of a _____ is to avoid seeking goals that are unrealistic, unprofitable, or unachievable","","SWOT (Strengths, Weaknesses, Opportunities, and Threats) Analysis"
+112,fill_blank,"Hardware-based security controls include _____.","","Biometric Devices"
+113,fill_blank,"_____ limitations result when a system that was designed for a specific hardware configuration becomes obsolete when new hardware is introduced.","","Perfomance"
+114,fill_blank,"_____ technology uses radio frequency identification (RFID) tags to identify and monitor the movement of each individual product, from a factory floor to the retail checkout counter.","","EPC (Electronic Product Code)"
+115,fill_blank,"_____ components can provide automated responses to sales inquiries, online order processing, and inventory tracking.","","Customer Relationship Managment (CRM)"
+116,fill_blank,"Electronic data interchange (EDI) enables _____ inventory systems, which rely on computer-to-computer data exchange to minimize unnecessary inventory.","","JIT (Just-In-Time)"
+117,fill_blank,"Many companies implement _____ systems that integrate all customer-related events and transactions.","","CRM (Customer Relationship Managment)"
+118,fill_blank,"Using _____, a supplier can use radio frequency identification (RFID) tags on each crate, case, or shipping unit to create a digital shipping list.","","EPOD (Electronic Proof of Delivery)"
+119,fill_blank,"The objective of a _____ is to use the combined judgement and experience of several analysts to evaluate systems projects.","","Computer Resource Committee"
+120,fill_blank,"_____ means that a proposed system will be used effectively after it has been developed.","","Operational Feasibility"
+121,fill_blank,"____ refers to the practical resources needed to develop, purchase, install, or operate a system.","","Technical Feasibility"
+122,fill_blank,"_____ includes ongoing support and maintenance costs, as well as acquisition costs.","","TCO (Total Cost of Ownership)"
+123,fill_blank,"Of the measures of feasibility, questions such as ""Does management support the project?"" and ""Will the new system require training for users?"" would help predict a system's _____.","","Operational Feasibility"
+124,fill_blank,"Of the measures of feasibility, questions such as ""Does the proposed platform have sufficient capacity for future needs?"" and ""Will the hardware and software environment be reliable?"" should be considered while assessing _____.","","Technical Feasibility"
+125,fill_blank,"_____ means that the projected benefits of a proposed system outweigh the estimated costs.","","Economic Feasibility"
+126,fill_blank,"Which is an example of a tangible benefit?","","An online package tracking system that improves services and decreases the need clerical staff."
+127,fill_blank,"Which is an example of an intangible benefit?","","A user-friendly system that improves employee job satisfaction."
+128,fill_blank,"_____ are the benefits that can be measured in dollars.","","Tangible Benefits"
+129,fill_blank,"_____ are advantages that are difficult to measure in dollars but are important to a company.","","Intangible Benefits"
+130,fill_blank,"_____ result from a decrease in expenses, an increase in revenues, or both.","","Tangible Benefits"
+131,fill_blank,"Of the measures of feasibility, _____ assesses tangible and intangible benefits to a company in addition to costs.","","Economic Feasibility"
+132,fill_blank,"_____ means that a project can be implemented in an acceptable time frame.","","Schedule Feasibility"
+133,fill_blank,"When assessing _____, a systems analyst must consider the interaction between time and costs.","","Schedule Feasibility"
+134,fill_blank,"Projects that provide the _____ are assigned the highest priority when setting priorities for systems requests.","","Greatest benefit, at the lowest cost, in the shortness period of time."
+135,fill_blank,"Which is an example of a discretionary project?","","Which is an example of a discretionary project?"
+136,fill_blank,"Projects where management has a choice in implementing them are called _____ projects.","","Discretionary"
+137,fill_blank,"Projects where management has no choice in implementing them are called _____ projects.","","Nondiscretionary"
+138,fill_blank,"A systems analyst conducts a preliminary investigation to study the _____ and recommend specific action.","","System Request"
+139,fill_blank,"A popular technique for investigating causes and effects is called a _____ diagram.","","Fishbone"
+140,fill_blank,"A _____ is an analysis tool that represents the possible causes of a problem as a graphical outline.","","Fishbone"
+141,fill_blank,"Determining the _____ means defining the specific boundaries, or extent, of a project.","","Project Scope"
+142,fill_blank,"To avoid the problem of _____, a project's scope should be defined as clearly as possible.","","Project Creep"
+143,fill_blank,"Projects with very general scope definitions are at risk of expanding gradually, without specific authorization, in a process called _____.","","Project Creep"
+144,fill_blank,"A _____ is a requirement or condition that a system must satisfy or an outcome that a system must achieve.","","Contraint"
+145,fill_blank,"The objective of _____ is to gather data about project usability, costs, benefits, and schedules.","","Fact-Finding"
+146,fill_blank,"A(n) _____ is not as flexible as a series of interviews, but it is less expensive, generally takes less time, and can involve a broad cross-section of people.","","Survery"
+147,fill_blank,"The _____, named after a nineteenth-century economist, is a widely used tool for visualizing issues that need attention and is drawn as a vertical bar graph.","","Pareto Chart"
+148,fill_blank,"Lara performs certain analyses and ensures that the company's image will not be at risk as a result of taking this project. This is an example of _____.","","Operational Feasibility"
+149,fill_blank,"Lara is involved in many other projects so she appoints a project manager for this project to ensure that the project is completed on time. This is an example of _____.","","Schedule Feasibility"
+150,true_false,"System developers can initiate a formal project as early as the preliminary investigation stage, or later on, as analysis, design, and implementation activities occur.","True|False",0
+151,true_false,"Program Evaluation Review Technique (PERT)/Critical Path Method (CPM) and Gantt charts are mutually exclusive techniques.","True|False",1
+152,true_false,"Using a work breakdown structure (WBS) allows one to manage a project as one large task.","True|False",1
+153,true_false,"In most systems analysis tasks, time and people are interchangeable.","True|False",1
+154,true_false,"The prior experience method to make time and cost estimates works best for large projects.","True|False",1
+155,true_false,"In a Program Evaluation Review Technique (PERT)/Critical Path Method (CPM) chart, each rectangular box, called a task box, has five sections that contain important information about a task.","True|False",0
+156,true_false,"When tasks must be completed one after another, they are called concurrent tasks.","True|False",1
+157,true_false,"If any task along a critical path falls behind schedule, the entire project will be delayed.","True|False",0
+158,true_false,"Generally, systems analysts review the work of other systems analysts, and programmers review the work of other programmers, as a form of peer review, in structured walk-throughs.","True|False",0
+159,true_false,"If team members lack experience with certain aspects of the required technology, temporary help might be obtained from IT consultants or part-time staff.","True|False",0
+160,true_false,"Quantitative risk analysis evaluates each risk by estimating the probability that it will occur and the degree of impact.","True|False",1
+161,true_false,"Critical time is the amount of time that the task could be late without pushing back the completion date of the entire project.","True|False",1
+162,true_false,"The purpose of quantitative risk analysis is to understand the actual impact in terms of dollars, time, project scope, or quality.","True|False",0
+163,true_false,"The three legs of the project triangle are management, staff, and clients.","True|False",1
+164,true_false,"Scheduling involves selecting and staffing the project team and assigning specific tasks to team members.","True|False",0
+165,true_false,"Henry L. Gantt developed Gantt charts almost 100 years ago.","True|False",0
+166,true_false,"In addition to tasks, every project has events, or milestones.","True|False",0
+167,true_false,"Weight is an importance value that is added to each duration estimate.","True|False",0
+168,true_false,"A project manager should never develop time and cost estimates based on the resources used for previously developed information systems.","True|False",1
+169,true_false,"The task name should be unique in the project.","True|False",1
+170,true_false,"The task duration is the same as the elapsed time.","True|False",1
+171,true_false,"A project schedule will not be accurate if the underlying task pattern is incorrect.","True|False",0
+172,true_false,"Progress reports may be given verbally to immediate supervisors, management, and users.","True|False",1
+173,true_false,"GanttProject is a free open-source Java-based project management tool that is available on multiple platforms.","True|False",0
+174,true_false,"Qualitative risk analysis can involve a modeling process called what-if analysis, which allows a project manager to vary one or more element(s) in a model to measure the effect on other elements.","True|False",1
+175,true_false,"A risk response plan is a proactive effort to anticipate a risk and describe an action plan to deal with it.","True|False",0
+176,true_false,"Frederick Brooks, Jr. observed that adding manpower to a late software project makes completion faster.","True|False",1
+177,true_false,"If the project manager fails to plan, staff, organize, supervise, communicate, motivate, evaluate, direct, and control properly, then the project is certain to fail.","True|False",0
+178,true_false,"Tasks are basic units of work that the project manager plans, schedules, and monitors.","True|False",0
+179,true_false,"Gantt charts are more useful for scheduling, monitoring, and controlling the actual work than PERT charts.","True|False",1
+180,fill_blank,"The three legs of a project triangle are _____, scope, and time.","","Cost"
+181,fill_blank,"Project planning, an activity of a project manager, _____.","","Includes identifying project tasks and estimating completion times and costs"
+182,fill_blank,"A project _____ negotiates with users who might have conflicting requirements or want changes that would require additional time or expense.","","Coordinator"
+183,fill_blank,"Project scheduling, an activity of a project manager, _____.","","Involves staffing, which includes selecting the project team and assignment specific tasks to team members."
+184,fill_blank,"Project monitoring, an activity of a project manager, _____.","","Requires guiding, supervising, and coordinating and project team's workload"
+185,fill_blank,"Project reporting, an activity of a project manager, _____.","","Includes information managment, users and the project team about the progress of a project."
+186,fill_blank,"Effective project reporting requires _____.","","Strong communicaiton skills"
+187,fill_blank,"A _____ involves breaking a project down into a series of smaller tasks.","","Workdown breakdown structure (WBS)"
+188,fill_blank,"The first step in the creation of a Program Evaluation Review Technique (PERT)/Critical Path Method (CPM) chart is to _____.","","Identify all the project tasks"
+189,fill_blank,"Using a(n) _____, a project manager can convert task start and finish times to actual dates by laying out the entire project on a calendar.","","Program Evaluation Review Technique (PERT) chart"
+190,fill_blank,"A _____ chart displays complex task patterns and relationships.","","Program Evalution review technique (PERT)"
+191,fill_blank,"The first step in creating a work breakdown structure (WBS) is to _____.","","List all the tasks"
+192,fill_blank,"A(n) _____ is a recognizable reference point that can be used to monitor progress.","","Event"
+193,fill_blank,"A _____ represents the work that one person can complete in one day.","","Person-Day"
+194,fill_blank,"The _____ is the most pessimistic outcome of a task.","","Worst-Case Estimate (W)"
+195,fill_blank,"A(n) _____ is a condition, restriction, or requirement that the system must satisfy.","","Constraint"
+196,fill_blank,"A _____ might involve maximums for one or more resources, such as time, dollars, or people.","","Contraint"
+197,fill_blank,"A _____ cannot be started until a previous task is completed.","","Dependent Tasks"
+198,fill_blank,"Two or more _____ depend on a predecessor task.","","Concurrent Tasks"
+199,fill_blank,"When several tasks can start at the same time, each is called a(n) _____ task.","","Concurrent"
+200,fill_blank,"Often, two or more concurrent tasks depend on a single prior task, which is called a _____.","","Predecessor Task"
+201,fill_blank,"When two or more concurrent tasks depend on a single prior task, each of the concurrent tasks is called a(n) _____.","","Successor Task"
+202,fill_blank,"A(n) _____ is a series of tasks that, if delayed, would affect the completion date of the overall project.","","Critical Path"
+203,fill_blank,"Project managers always must be aware of the _____, so they can monitor the vital tasks and keep a project on track.","","Critical Path"
+204,fill_blank,"A _____ is a sequence of tasks that has no slack time.","","Critical Path"
+205,fill_blank,"A _____ is a review of a project team member's work by other members of a team.","","Structured Walk-Through"
+206,fill_blank,"When maintaining schedules, if enough _____ and frequent checkpoints exist, problems will be detected rapidly.","","Milestones"
+207,fill_blank,"_____ give team members of a project an opportunity to share information, discuss common problems, and explain new techniques.","","Project Status Meetings"
+208,fill_blank,"_____ give the project managers an opportunity to seek input and conduct brainstorming sessions.","","Project Status Meetings"
+209,fill_blank,"_____ is a full-featured program that holds the dominant share of the project management software market.","","Microsoft Project"
+210,fill_blank,"A _____ consists of horizontal bars, connected with arrows that indicate task dependencies.","","Gantt Chart"
+211,fill_blank,"A _____ displays the same information as the Gantt chart, including task dependencies, but uses task boxes to include much more detail.","","Network Diagram"
+212,fill_blank,"_____, a free cloud-based project management tool, runs in a browser window, so there is no software to install to use it.","","Gantter"
+213,fill_blank,"A(n) _____ is an event that could affect a project negatively.","","Risk"
+214,fill_blank,"A _____ includes a review of a project's scope, stakeholders, budget, schedule, and any other internal or external factors that might affect the project.","","Risk Managment Plan"
+215,fill_blank,"_____ lists each risk and assesses the likelihood that it could affect a project.","","Risk Indentification"
+216,fill_blank,"A _____ is a proactive effort to anticipate a risk and describe an action plan to deal with it.","","Risk Response Plan"
+217,fill_blank,"A continuous risk-tracking process can _____.","","Notice changes in existing risks"
+218,fill_blank,"_____ can involve a modeling process called what-if analysis, which allows a project manager to vary one or more element(s) in a model to measure the effect on other elements.","","Quantitive Risk Analysis"
+219,fill_blank,"_____, a human resource issue, is a possible cause of cost overruns in an organization.","","Inadequate Trianing"
+220,fill_blank,"When a project manager first recognizes that a project is in trouble, one of the options available to the manager is _____.","","Delaying the Project Deadline"
+221,fill_blank,"Adding more people to a project actually might increase the time necessary to complete the project because of a principle called _____.","","Brooks' Law"
+222,fill_blank,"A Gantt chart can simplify a complex project by combining several activities into a task _____ that contains subsidiary tasks.","","Group"
+223,fill_blank,"Mauricio estimates that the first module of the project could be completed in as few as 15 days or could take as many as 25 days, but most likely will require 20 days. What is the 20 day estimate called?","","Probable-Case Estimate"
+224,fill_blank,"Mauricio has decided to use a project management tool for this project. He wants the tool to be free and cloud-based so that there is no need for software to be installed. Help Mauricio in identifying the project management tool that best fits the purpose.","","Gantter"
+225,true_false,"Systems developers use joint application development (JAD) whenever group input and interaction are not desired, because it is linked to a specific development methodology.","True|False",1
+226,true_false,"IT professionals recognize that successful systems must be user-oriented, and users need to be involved, formally or informally, at every stage of system development.","True|False",0
+227,true_false,"Due to the limited range of input and interaction among participants, few companies believe that a joint application development (JAD) group produces the best definition of a new system.","True|False",1
+228,true_false,"Compared with traditional methods, the entire rapid application development (RAD) process is expanded and, as a result, the new system is built, delivered, and placed in operation much later.","True|False",1
+229,true_false,"The main objective of all rapid application development (RAD) approaches is to extend development time and expense by excluding users from every phase of systems development.","True|False",1
+230,true_false,"Because use cases depict a system through the eyes of a user, common business language can be used to describe the transactions.","True|False",0
+231,true_false,"System requirements serve as benchmarks to measure the overall acceptability of a finished system.","True|False",0
+232,true_false,"In addition to helping to gather and analyze facts, many programs also automatically perform fact-finding for systems analysts.","True|False",1
+233,true_false,"When using fact-finding techniques, asking what is being done is the same as asking what could or should be done.","True|False",1
+234,true_false,"Knowledge of a company's formal and informal structures helps a systems analyst determine the people to interview during the systems analysis phase.","True|False",0
+235,true_false,"In the early stages of systems analysis, interviews usually focus on specific topics, but as the fact-finding process continues, the interviews become more general.","True|False",1
+236,true_false,"Creating a standard list of interview questions helps a systems analyst to keep on track and avoid unnecessary tangents.","True|False",0
+237,true_false,"A list of topics should be sent to an interviewee several days before the meeting, especially when detailed information is needed, so the person can prepare for the interview and minimize the need for a follow-up meeting.","True|False",0
+238,true_false,"When conducting an interview, after asking a question, allow the person enough time to think about the question and arrive at an answer.","True|False",0
+239,true_false,"Although taking notes during an interview has both advantages and disadvantages, the accepted view is that note taking should be extensive.","True|False",1
+240,true_false,"System documentation is always up-to-date.","True|False",1
+241,true_false,"Personal observation allows a systems analyst to verify statements made in interviews and determine whether procedures really operate as they are described.","True|False",0
+242,true_false,"When designing a questionnaire, the most important rule of all is to make sure that questions collect the right data in a form that can be used to further the fact-finding effort.","True|False",0
+243,true_false,"When designing a questionnaire, arrange questions in a random order, intermixing simple and more complex topics.","True|False",1
+244,true_false,"Before publishing a form on the Internet or a company intranet, a systems analyst should protect it so users can change the layout or design but cannot fill it in.","True|False",1
+245,true_false,"The main objective of a sample is to ensure that it represents the overall population accurately.","True|False",0
+246,true_false,"A single site visit usually gives true pictures, so it is unnecessary to visit more than one installation.","True|False",1
+247,true_false,"The ability to manage information is the mark of a successful systems analyst and an important skill for all IT professionals.","True|False",0
+248,true_false,"Joint application development (JAD) provides a fast-track approach to a full spectrum of system development tasks, including planning, design, construction, and implementation.","True|False",1
+249,true_false,"An agile approach emphasizes continuous feedback, and each incremental step is affected by what was learned in the prior steps.","True|False",0
+250,true_false,"In a sequence diagram, vertical arrows represent messages from one object to another.","True|False",1
+251,true_false,"The personal interview usually is the least expensive fact-finding technique.","True|False",1
+252,true_false,"Greater user involvement usually results in better communication, faster development times, and more satisfied users.","True|False",0
+253,true_false,"A popular user-oriented method is rapid application development (RAD), which resembles a condensed version of the entire SDLC, with users involved every step of the way.","True|False",0
+254,true_false,"RAD does not rely on user involvement.","True|False",1
+255,fill_blank,"In the rapid application development (RAD) model, during the _____ phase, users interact with systems analysts and develop models and prototypes that represent all system processes, outputs, and inputs.","","User Design"
+256,fill_blank,"In the rapid application development (RAD) model, the _____ phase focuses on program and application development tasks similar to the SDLC.","","Construct"
+257,fill_blank,"In the rapid application development (RAD) model, the _____ phase resembles the final tasks in the SDLC implementation phase.","","Cutover"
+258,fill_blank,"The primary advantage of rapid application development (RAD) is that","","Systems can be developed more quickly with significant cost savings."
+259,fill_blank,"In a(n) _____, team members prepare to lunge at each other to achieve their objectives.","","Scrum"
+260,fill_blank,"Using _____, an analyst can show business functions and break them down into lower-level functions and processes.","","Functional Decomposition Diagrams (FDD)"
+261,fill_blank,"The _____ is a top-down representation of a process.","","Functional Decomposition Diagram (FDD)"
+262,fill_blank,"The _____ is a widely used method of visualizing and documenting software systems design.","","Unified Modeling Language (UML)"
+263,fill_blank,"A _____ is a Unified Modeling Language (UML) technique that visually represents the interaction between users and an information system.","","Use Case Diagram"
+264,fill_blank,"In a use case diagram, the user becomes a(n) _____, with a specific role that describes how he or she interacts with a system.","","Actor"
+265,fill_blank,"A(n) _____ is a characteristic or feature that must be included in an information system to satisfy business needs and be acceptable to users.","","System Requirement"
+266,fill_blank,"A(n) _____ shows the timing of interactions between objects as they occur.","","Sequence Diagram"
+267,fill_blank,"To evaluate _____, a systems analyst needs information about projected future volume for all outputs, inputs, and processes.","","Scalability"
+268,fill_blank,"The term ""_____"" refers to a system's ability to handle increased business volume and transactions in the future.","","Scalability"
+269,fill_blank,"In addition to direct evaluations, systems developers must identify and document indirect expenses that contribute to the _____.","","Total Cost of Ownership (TCO)"
+270,fill_blank,"_____ is a planned meeting during which a systems analyst obtains information from another person.","","An Interview"
+271,fill_blank,"In a(n) _____ structure, which usually is based on interpersonal relationships, some people have more influence or knowledge than appears on an organization chart.","","Informal"
+272,fill_blank,"In an interview, _____ encourage spontaneous and unstructured responses.","","Open-ended Questions"
+273,fill_blank,"In an interview, _____ limit or restrict the response.","","Closed-ended Questions"
+274,fill_blank,"In an interview, _____ are questions that ask a person to evaluate something by providing limited answers to specific responses or on a numeric scale.","","Range-of-Response Questions"
+275,fill_blank,"When phrasing interview questions, a systems analyst should avoid _____ that suggest or favor a particular reply.","","Leading Questions"
+276,fill_blank,"The process of concentrating on what is said in an interview and noticing any nonverbal communication that takes place is called _____.","","Engaged Listening"
+277,fill_blank,"Supporters of neutral locations for interviews believe that it _____.","",". Keeps interruptions to a minimum so people can concentrate fully"
+278,fill_blank,"If an interviewee gives only short or incomplete responses to open-ended questions, a systems analyst should _____.","","Switch to Closed-ended Questions"
+279,fill_blank,"_____ can help a systems analyst understand how the current system is supposed to work.","","Document Review"
+280,fill_blank,"When studying an information system, examples of actual documents should be collected using a process called _____.","","Sampling"
+281,fill_blank,"When preparing a representative sample from a list of 200 customers who complained about errors in their statements, a _____ might select every tenth customer for review.","","Systematic Sample"
+282,fill_blank,"When preparing a representative sample from a list of 200 customers who complained about errors in their statements, a _____ could ensure the sample is balanced geographically by selecting five customers from each of four zip codes.","","Stratified Sample"
+283,fill_blank,"When preparing a representative sample from a list of 200 customers who complained about errors in their statements, a _____ might select any 20 customers.","","Random Sample"
+284,fill_blank,"A common tool for showing the distribution of a questionnaire or sampling results is a vertical bar chart called a _____.","","Histogram"
+285,fill_blank,"A(n) _____, such as Microsoft Outlook, includes a private calendar, a to-do list, and powerful contact management features.","","Personal information Manager (PIM)"
+286,fill_blank,"Microsoft OneNote is a type of _____ software.","","Information Managment"
+287,fill_blank,"To obtain answers to requirements questions, the analyst develops a _____ plan, which involves answers to five familiar questions: who, what, where, when, and how.","","Fact-Finding"
+288,fill_blank,"As John develops the agenda, he wants to put the name of the appropriate person next to the agenda item. Whose name would he put next to the final task on the agenda, the task of documenting the results of the JAD","","His Own"
+289,fill_blank,"John has finished compiling a list of the various members of the joint application development (JAD) group and the list is as follows: John is the JAD project leader, Tom is the representative from top management, Jennifer is a manager, Alen and Ian are users, Linda and Alex are systems analysts, and Clark is the recorder.There have been some rumblings within the firm that this development project is not necessary so John and others feel it is important to explain the reason for the project at the outset. Whose name goes next to this point on the agenda?","","Tom"
+290,fill_blank,"John has finished compiling a list of the various members of the joint application development (JAD) group and the list is as follows: John is the JAD project leader, Tom is the representative from top management, Jennifer is a manager, Alen and Ian are users, Linda and Alex are systems analysts, and Clark is the recorder.Who should be in charge of documenting the results of the JAD session?","","Clark"
+291,fill_blank,"John has finished compiling a list of the various members of the joint application development (JAD) group and the list is as follows: John is the JAD project leader, Tom is the representative from top management, Jennifer is a manager, Alen and Ian are users, Linda and Alex are systems analysts, and Clark is the recorder.Who should provide feedback regarding how the project will support day-to-day tasks?","","Ian"
+292,fill_blank,"In projects where it is desirable to obtain input from a large number of people, a(n) _____ can be a valuable tool.","","Questionnaire"
+293,fill_blank,"Which is a non-functional requirement?","","The system must be operational 7 days a week, 365 days a year."
+294,fill_blank,"Which is a functional requirement?","","The contact managment system shall generate a daily reminder list for all sales representatives"
+295,fill_blank,"Representing requirements deals with _____ the problem.","","Describing"
+296,fill_blank,"Which technique involves each participant speaking or passing when it is his or her turn?","","Strunctured Brainstorming"
+297,fill_blank,"A _____ (sometimes called an epic) is a simple, high-level statement of a requirement.","","Feature"
+298,fill_blank,"What process is concerned with demonstrating that the requirements define the system that the customer really wants?","","Validation"
+299,fill_blank,"A(n) _____ is a simple graphic organizer that helps systems analysts visualize the status of a project.","","Storyboard"
