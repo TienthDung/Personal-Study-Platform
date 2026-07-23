@@ -93,7 +93,8 @@ img {
   height: auto;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -612,16 +613,39 @@ body.light-theme .brand-text h1 {
 .grid-btn.status-incorrect {
   background: var(--status-incorrect-bg);
   border-color: var(--status-incorrect-border);
-  color: var(--status-incorrect);
 }
 
-.grid-btn.is-favorite::after {
+.grid-btn.is-favorite::before {
   content: '★';
   position: absolute;
-  top: -2px;
-  right: -2px;
-  font-size: 0.6rem;
+  top: -6px;
+  right: -6px;
+  font-size: 0.8rem;
   color: var(--star-gold);
+  background: var(--bg-card);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.grid-btn.has-note::after {
+  content: '📝';
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+  font-size: 0.75rem;
+  background: var(--bg-card);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 /* ==========================================================================
@@ -678,24 +702,40 @@ body.light-theme .brand-text h1 {
   letter-spacing: 0.05em;
 }
 
-.favorite-btn {
+.favorite-btn, .note-btn {
   background: transparent;
   border: none;
-  color: var(--text-muted);
   font-size: 1.6rem;
+  color: var(--text-muted);
   cursor: pointer;
   transition: all var(--transition-fast);
   padding: 4px;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .favorite-btn:hover {
-  transform: scale(1.15);
   color: var(--star-gold);
+  transform: scale(1.15) rotate(15deg);
 }
 
 .favorite-btn.active {
   color: var(--star-gold);
+}
+
+.note-btn {
+  font-size: 1.3rem; /* slightly smaller icon */
+}
+
+.note-btn:hover {
+  color: var(--accent-primary);
+  transform: scale(1.15);
+}
+
+.note-btn.active {
+  color: var(--accent-primary);
 }
 
 .card-body {
@@ -709,13 +749,54 @@ body.light-theme .brand-text h1 {
 
 .question-text {
   font-size: var(--font-h2);
+  line-height: 1.6;
   font-weight: 600;
-  line-height: 1.5;
+  margin-bottom: 24px;
   color: var(--text-primary);
   background: var(--glass-bg-subpanel);
   padding: 22px 26px;
   border-radius: 16px;
   border: 1px solid var(--glass-border);
+}
+
+/* Note Container */
+.note-container {
+  margin-bottom: 20px;
+  max-height: 200px; /* limits expansion */
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+.note-container.hidden {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+  display: block !important; /* override default hidden class to allow animation */
+}
+
+.note-input {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.note-input:focus {
+  border-color: var(--glass-border-highlight);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.note-input::placeholder {
+  color: var(--text-muted);
 }
 
 /* Interactive Options Container */
@@ -1206,9 +1287,10 @@ button {
 /* Tablet Layout: 768px to 1024px */
 @media (max-width: 1024px) {
   .workspace-grid {
-    grid-template-columns: 1fr 260px; /* Narrower sidebar on tablet */
+    grid-template-columns: 1fr 260px;
+    /* Narrower sidebar on tablet */
   }
-  
+
   .question-grid {
     grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
   }
@@ -1227,16 +1309,19 @@ button {
 /* Smartphone Layout: 320px to 768px */
 @media (max-width: 768px) {
   .workspace-grid {
-    grid-template-columns: 1fr; /* 1 column layout */
+    grid-template-columns: 1fr;
+    /* 1 column layout */
   }
 
   .sidebar {
     max-height: 280px;
-    order: 2; /* Move sidebar below main content */
+    order: 2;
+    /* Move sidebar below main content */
   }
-  
+
   .main-content {
-    order: 1; /* Main content on top */
+    order: 1;
+    /* Main content on top */
   }
 
   .app-header {
