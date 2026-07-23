@@ -20,7 +20,7 @@
             overflow: hidden !important; /* Prevent page scroll, use internal scrolling */
         }
         
-        @media (max-width: 767px) {
+        @media (max-width: 900px) {
             /* 1. Header Clean-up */
             .app-header.personalized-header {
                 flex-direction: column !important;
@@ -657,7 +657,7 @@
         const closeSidebarBtn = document.getElementById('close-sidebar-btn');
 
         function toggleMobileSidebar() {
-            if (window.innerWidth <= 767) {
+            if (window.innerWidth <= 900) {
                 sidebar.classList.toggle('modal-active');
                 mobileOverlay.classList.toggle('active');
                 if (sidebar.classList.contains('modal-active')) {
