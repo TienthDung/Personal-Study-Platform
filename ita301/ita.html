@@ -14,9 +14,10 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../styles.css">
     
-    <!-- Mobile Responsive Header CSS -->
+    <!-- Mobile Responsive & Sidebar Modal CSS -->
     <style>
         @media (max-width: 767px) {
+            /* 1. Header Clean-up */
             .app-header.personalized-header {
                 flex-direction: column !important;
                 align-items: center !important;
@@ -27,15 +28,120 @@
                 width: 100% !important;
                 justify-content: center !important;
                 flex-wrap: wrap !important;
+                gap: 10px !important;
             }
             .header-center-widgets {
                 width: 100% !important;
                 justify-content: center !important;
             }
             .header-actions {
-                width: 100% !important;
-                justify-content: center !important;
+                display: none !important; /* Hide Homepage/Contact on Mobile to save space */
             }
+
+            /* 2. Main Content Focus */
+            .workspace-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .question-card {
+                width: calc(100% - 24px) !important;
+                margin: 0 12px 24px 12px !important;
+            }
+            .card-footer {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                gap: 12px !important;
+            }
+            .card-footer button {
+                min-height: 44px; /* Apple Touch Target */
+                flex: 1;
+            }
+            
+            /* 3. Sidebar Modal */
+            aside.sidebar {
+                position: fixed !important;
+                bottom: 0;
+                left: 0;
+                width: 100% !important;
+                max-height: 85vh;
+                margin: 0 !important;
+                border-radius: 24px 24px 0 0 !important;
+                z-index: 1002 !important;
+                transform: translateY(100%);
+                opacity: 0;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                display: flex !important;
+            }
+            aside.sidebar.modal-active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            .question-grid {
+                max-height: 50vh !important;
+                grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)) !important;
+            }
+            
+            /* Show FAB on Mobile */
+            .mobile-fab {
+                display: flex !important;
+            }
+        }
+        
+        /* Close Button in Sidebar Header */
+        .close-modal-btn {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: var(--text-primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        @media (max-width: 767px) {
+            .close-modal-btn { display: flex; }
+        }
+
+        /* FAB Base Styles (Hidden on Desktop) */
+        .mobile-fab {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(140, 180, 255, 0.3);
+            color: var(--text-primary);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+        }
+        .mobile-fab:active { transform: scale(0.92); }
+
+        /* Overlay */
+        .mobile-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .mobile-overlay.active {
+            opacity: 1;
+            pointer-events: all;
         }
     </style>
 </head>
@@ -235,8 +341,11 @@
             <!-- Sidebar: Question Navigation & Filters (On Right side) -->
             <aside class="sidebar glass-panel">
                 <div class="sidebar-header">
-                    <h2>Question Bank</h2>
-                    <span id="filtered-count-badge" class="count-badge">300</span>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <h2>Question Bank</h2>
+                        <span id="filtered-count-badge" class="count-badge">300</span>
+                    </div>
+                    <button id="close-sidebar-btn" class="close-modal-btn" title="Close">✕</button>
                 </div>
 
                 <!-- Search Box -->
@@ -534,7 +643,44 @@
                 });
             });
         });
+
+        // ==========================================
+        // Sidebar Modal Logic for Mobile
+        // ==========================================
+        const mobileFab = document.getElementById('mobile-sidebar-fab');
+        const sidebar = document.querySelector('aside.sidebar');
+        const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
+        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+
+        function toggleMobileSidebar() {
+            if (window.innerWidth <= 767) {
+                sidebar.classList.toggle('modal-active');
+                mobileOverlay.classList.toggle('active');
+                if (sidebar.classList.contains('modal-active')) {
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        if (mobileFab && closeSidebarBtn && mobileOverlay) {
+            mobileFab.addEventListener('click', toggleMobileSidebar);
+            closeSidebarBtn.addEventListener('click', toggleMobileSidebar);
+            mobileOverlay.addEventListener('click', toggleMobileSidebar);
+        }
     </script>
+    
+    <!-- Mobile Sidebar FAB -->
+    <button id="mobile-sidebar-fab" class="mobile-fab" title="Open Question Bank">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+    <!-- Overlay for Mobile Sidebar Modal -->
+    <div id="mobile-sidebar-overlay" class="mobile-overlay"></div>
 </body>
 
 </html>
