@@ -88,7 +88,8 @@ body {
   background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
   color: var(--text-primary);
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
   transition: background var(--transition-normal), color var(--transition-normal);
 }

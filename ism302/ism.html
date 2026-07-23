@@ -294,6 +294,225 @@
 
     <!-- Main Application Logic -->
     <script src="app_ism.js"></script>
+
+    <!-- Strict Authentication Modal -->
+    <style>
+        .auth-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(15px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .auth-modal-content {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            color: #fff;
+        }
+
+        .auth-modal-header h2 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            text-align: center;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .auth-modal-header p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .auth-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .auth-form-group label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .auth-input,
+        .auth-select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .auth-input:focus,
+        .auth-select:focus {
+            border-color: #3b82f6;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .auth-select option {
+            background: #1e293b;
+            color: #fff;
+        }
+
+        .auth-error {
+            color: #ef4444;
+            font-size: 0.9rem;
+            text-align: center;
+            min-height: 20px;
+            font-weight: 600;
+        }
+
+        .auth-submit-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 14px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+
+        .auth-submit-btn:hover {
+            background: #2563eb;
+        }
+
+        body.light-theme .auth-modal-content {
+            background: rgba(255, 255, 255, 0.85);
+            color: #0f172a;
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-theme .auth-form-group label {
+            color: #334155;
+        }
+
+        body.light-theme .auth-input,
+        body.light-theme .auth-select {
+            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #0f172a;
+        }
+    </style>
+
+    <div id="auth-modal" class="auth-modal-overlay" style="display: none;">
+        <div class="auth-modal-content">
+            <div class="auth-modal-header">
+                <h2>Security Verification</h2>
+                <p>Please answer the following questions to gain access.</p>
+            </div>
+
+            <div class="auth-form-group">
+                <label>1. Who owns the website?</label>
+                <input type="text" id="auth-q1" class="auth-input" placeholder="Enter owner's full name"
+                    autocomplete="off">
+            </div>
+
+            <div class="auth-form-group">
+                <label>2. Is the website owner world-class?</label>
+                <select id="auth-q2" class="auth-select">
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="auth-form-group">
+                <label>3. Is the website owner the most handsome man in the world?</label>
+                <select id="auth-q3" class="auth-select">
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="auth-form-group">
+                <label>Enter key to continue:</label>
+                <input type="password" id="auth-q4" class="auth-input" placeholder="Enter access key" autocomplete="off">
+            </div>
+
+            <div id="auth-error-msg" class="auth-error"></div>
+
+            <button id="auth-verify-btn" class="auth-submit-btn">Verify & Access</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const authModal = document.getElementById('auth-modal');
+            const isAuth = localStorage.getItem('ownerAuth');
+
+            if (isAuth !== 'true') {
+                authModal.style.display = 'flex';
+                // Lock scrolling just in case
+                document.body.style.overflow = 'hidden';
+            }
+
+            const verifyBtn = document.getElementById('auth-verify-btn');
+            const errorMsg = document.getElementById('auth-error-msg');
+
+            verifyBtn.addEventListener('click', () => {
+                const q1 = document.getElementById('auth-q1').value.trim();
+                const q2 = document.getElementById('auth-q2').value;
+                const q3 = document.getElementById('auth-q3').value;
+                const q4 = document.getElementById('auth-q4').value.trim();
+
+                // Validation rules
+                const isQ1Correct = (q1 === 'Thân Tiến Dũng');
+                const isQ2Correct = (q2 === 'Yes');
+                const isQ3Correct = (q3 === 'Yes');
+                const isQ4Correct = (q4 === 'se203676' || q4 === 'SE203676');
+
+                if (isQ1Correct && isQ2Correct && isQ3Correct && isQ4Correct) {
+                    localStorage.setItem('ownerAuth', 'true');
+                    authModal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore original overflow from CSS
+                } else {
+                    localStorage.setItem('ownerAuth', 'false');
+                    errorMsg.textContent = 'Verification failed. Please ensure all answers are absolutely correct.';
+
+                    // Add shake effect
+                    const content = authModal.querySelector('.auth-modal-content');
+                    content.style.transform = 'translateX(-10px)';
+                    setTimeout(() => content.style.transform = 'translateX(10px)', 100);
+                    setTimeout(() => content.style.transform = 'translateX(-10px)', 200);
+                    setTimeout(() => content.style.transform = 'translateX(10px)', 300);
+                    setTimeout(() => content.style.transform = 'translateX(0)', 400);
+                }
+            });
+
+            // Allow Enter key to trigger verification
+            const inputs = authModal.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        verifyBtn.click();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
