@@ -182,7 +182,10 @@ class QuizApp {
       questionNumberBadge: document.getElementById('question-number-badge'),
       questionTypeBadge: document.getElementById('question-type-badge'),
       favoriteToggleBtn: document.getElementById('favorite-toggle-btn'),
+      noteToggleBtn: document.getElementById('note-toggle-btn'),
       questionText: document.getElementById('question-text'),
+      noteContainer: document.getElementById('note-container'),
+      noteTextarea: document.getElementById('note-textarea'),
       optionsContainer: document.getElementById('options-container'),
       feedbackBox: document.getElementById('feedback-box'),
       feedbackStatusIcon: document.getElementById('feedback-status-icon'),
@@ -348,6 +351,33 @@ class QuizApp {
     this.dom.prevQuestionBtn.addEventListener('click', () => this.navigateRelative(-1));
     this.dom.nextQuestionBtn.addEventListener('click', () => this.navigateRelative(1));
     this.dom.favoriteToggleBtn.addEventListener('click', () => this.toggleFavoriteCurrent());
+    
+    // Note Toggle & Input
+    this.dom.noteToggleBtn.addEventListener('click', () => {
+       const isHidden = this.dom.noteContainer.classList.contains('hidden');
+       if (isHidden) {
+          this.dom.noteContainer.classList.remove('hidden');
+          this.dom.noteToggleBtn.classList.add('active');
+          this.dom.noteTextarea.focus();
+       } else {
+          this.dom.noteContainer.classList.add('hidden');
+          this.dom.noteToggleBtn.classList.remove('active');
+       }
+    });
+
+    this.dom.noteTextarea.addEventListener('input', (e) => {
+       const q = this.state.filteredQuestions[this.state.currentQuestionIndex];
+       if (!q) return;
+       const note = e.target.value.trim();
+       if (!this.state.quizProgress[q.id]) {
+           this.state.quizProgress[q.id] = { answered: false, isCorrect: false, userAnswer: null, revealed: false, note: '' };
+       }
+       this.state.quizProgress[q.id].note = note;
+       this.saveStateToStorage();
+       this.renderSidebar(); // Update grid indicators
+       this.updateStats(); // Update note count badge
+    });
+    
     this.dom.revealAnswerBtn.addEventListener('click', () => this.revealAnswer());
 
     // Exam Mode Controls
@@ -613,6 +643,11 @@ class QuizApp {
         if (!prog || prog.isCorrect) return false;
       }
 
+      if (currentFilter === 'notes') {
+        const prog = quizProgress[q.id];
+        if (!prog || !prog.note || prog.note.trim().length === 0) return false;
+      }
+
       // Search Query Match (across question text and options)
       if (searchQuery) {
         const matchQuestion = q.question.toLowerCase().includes(searchQuery);
@@ -681,6 +716,10 @@ class QuizApp {
       if (filter === 'favorites') badge.textContent = favorites.length;
       if (filter === 'correct') badge.textContent = correctCount;
       if (filter === 'incorrect') badge.textContent = answeredCount - correctCount;
+      if (filter === 'notes') {
+         const countNotes = questions.filter(q => quizProgress[q.id] && quizProgress[q.id].note && quizProgress[q.id].note.trim().length > 0).length;
+         badge.textContent = countNotes;
+      }
     });
   }
 
@@ -728,6 +767,11 @@ class QuizApp {
         btn.classList.add('is-favorite');
       }
 
+      // Check notes
+      if (prog && prog.note && prog.note.trim().length > 0) {
+        btn.classList.add('has-note');
+      }
+
       fragment.appendChild(btn);
     });
 
@@ -767,10 +811,21 @@ class QuizApp {
     // Question Text
     this.dom.questionText.textContent = q.question;
 
+    // Note State
+    const prog = quizProgress[q.id];
+    if (prog && prog.note && prog.note.trim().length > 0) {
+       this.dom.noteTextarea.value = prog.note;
+       this.dom.noteContainer.classList.remove('hidden');
+       this.dom.noteToggleBtn.classList.add('active');
+    } else {
+       this.dom.noteTextarea.value = '';
+       this.dom.noteContainer.classList.add('hidden');
+       this.dom.noteToggleBtn.classList.remove('active');
+    }
+
     // Render Options / Input Container
     this.dom.optionsContainer.innerHTML = '';
 
-    const prog = quizProgress[q.id];
     const isAnsweredOrRevealed = prog && (prog.answered || prog.revealed);
 
     if (q.type === 'true_false' || q.type === 'single_choice') {
