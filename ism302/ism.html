@@ -776,6 +776,56 @@
         </div>
     </div>
 
+    <!-- How to Use Modal -->
+    <div id="how-to-use-modal" class="auth-modal-overlay">
+        <div class="auth-modal-content contact-content" style="max-width: 500px; text-align: left;">
+            <div class="contact-icon-wrapper" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2)); border-color: rgba(16, 185, 129, 0.3); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2); margin: 0 auto -10px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#howToGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <defs>
+                        <linearGradient id="howToGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#34d399" />
+                            <stop offset="100%" stop-color="#60a5fa" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </div>
+
+            <div class="auth-modal-header" style="margin-top: 10px; margin-bottom: 20px; text-align: center;">
+                <h2 style="background: linear-gradient(135deg, #34d399, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">How to Use</h2>
+                <p style="margin-top: 8px;">Welcome! Here are some tips to maximize your study sessions.</p>
+            </div>
+            
+            <div style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                    <li style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <strong style="color: #60a5fa; display: block; margin-bottom: 6px; font-size: 1.05rem;">🚀 Two Study Modes</strong>
+                        <b>Practice Mode:</b> Review at your own pace, take notes, and check answers instantly.<br>
+                        <b style="margin-top: 4px; display: inline-block;">Exam Mode:</b> Take a timed mock exam (30 random questions in 45 mins).
+                    </li>
+                    <li style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <strong style="color: #34d399; display: block; margin-bottom: 6px; font-size: 1.05rem;">⌨️ Keyboard Shortcuts</strong>
+                        <b>Left / Right:</b> Navigate between questions.<br>
+                        <b>Up / Down / Enter:</b> Select and confirm options.<br>
+                        <b style="margin-top: 4px; display: inline-block;">Spacebar:</b> Instantly reveal the answer (Practice mode).
+                    </li>
+                    <li style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <strong style="color: #fbbf24; display: block; margin-bottom: 6px; font-size: 1.05rem;">⭐ Favorites & Notes</strong>
+                        Star tricky questions and add personal notes. Use the sidebar to filter and review them later.
+                    </li>
+                </ul>
+            </div>
+
+            <div style="display: flex; width: 100%;">
+                <button id="close-how-to-use-btn" class="contact-send-btn" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                    Got it, let's start!
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const authModal = document.getElementById('auth-modal');
@@ -803,6 +853,11 @@
                     localStorage.setItem('ownerAuth', 'true');
                     authModal.classList.remove('active');
                     document.body.style.overflow = ''; // Restore original overflow from CSS
+                    
+                    const howToModal = document.getElementById('how-to-use-modal');
+                    if (howToModal) {
+                        howToModal.classList.add('active');
+                    }
                 } else {
                     localStorage.setItem('ownerAuth', 'false');
                     errorMsg.textContent = 'Verification failed. Please ensure all answers are absolutely correct.';
@@ -845,6 +900,27 @@
                 contactModal.addEventListener('click', (e) => {
                     if (e.target === contactModal) {
                         contactModal.classList.remove('active');
+                    }
+                });
+            }
+
+            // How to Use Modal Logic
+            const howToModal = document.getElementById('how-to-use-modal');
+            const closeHowToBtn = document.getElementById('close-how-to-use-btn');
+            
+            if (howToModal) {
+                // Show if auth is not blocking
+                if (isAuth === 'true' && (!expiry || Date.now() <= parseInt(expiry))) {
+                    howToModal.classList.add('active');
+                }
+                
+                closeHowToBtn.addEventListener('click', () => {
+                    howToModal.classList.remove('active');
+                });
+                
+                howToModal.addEventListener('click', (e) => {
+                    if (e.target === howToModal) {
+                        howToModal.classList.remove('active');
                     }
                 });
             }
