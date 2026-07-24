@@ -1319,8 +1319,3 @@ class QuizApp {
 document.addEventListener('DOMContentLoaded', () => {
   window.app = new QuizApp();
 });
-
-// Launch application once DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  window.app = new QuizApp();
-});
