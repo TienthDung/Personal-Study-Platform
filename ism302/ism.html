@@ -726,30 +726,6 @@
             </div>
 
             <div class="auth-form-group">
-                <label>1. Who owns the website?</label>
-                <input type="text" id="auth-q1" class="auth-input" placeholder="Enter owner's full name"
-                    autocomplete="off">
-            </div>
-
-            <div class="auth-form-group">
-                <label>2. Is the website owner world-class?</label>
-                <select id="auth-q2" class="auth-select">
-                    <option value="">Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-
-            <div class="auth-form-group">
-                <label>3. Is the website owner the most handsome man in the world?</label>
-                <select id="auth-q3" class="auth-select">
-                    <option value="">Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-
-            <div class="auth-form-group">
                 <label>Enter key to continue:</label>
                 <input type="password" id="auth-q4" class="auth-input" placeholder="Enter access key"
                     autocomplete="off">
@@ -817,18 +793,11 @@
             const errorMsg = document.getElementById('auth-error-msg');
 
             verifyBtn.addEventListener('click', () => {
-                const q1 = document.getElementById('auth-q1').value.trim();
-                const q2 = document.getElementById('auth-q2').value;
-                const q3 = document.getElementById('auth-q3').value;
                 const q4 = document.getElementById('auth-q4').value.trim();
 
-                // Validation rules
-                const isQ1Correct = (q1 === 'Thân Tiến Dũng');
-                const isQ2Correct = (q2 === 'Yes');
-                const isQ3Correct = (q3 === 'Yes');
                 const isQ4Correct = (q4 === 'se203676' || q4 === 'SE203676');
 
-                if (isQ1Correct && isQ2Correct && isQ3Correct && isQ4Correct) {
+                if (isQ4Correct) {
                     const expiryTime = Date.now() + (3 * 60 * 60 * 1000);
                     localStorage.setItem('ownerAuthExpiry', expiryTime);
                     localStorage.setItem('ownerAuth', 'true');
