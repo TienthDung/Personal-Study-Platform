@@ -351,33 +351,33 @@ class QuizApp {
     this.dom.prevQuestionBtn.addEventListener('click', () => this.navigateRelative(-1));
     this.dom.nextQuestionBtn.addEventListener('click', () => this.navigateRelative(1));
     this.dom.favoriteToggleBtn.addEventListener('click', () => this.toggleFavoriteCurrent());
-    
+
     // Note Toggle & Input
     this.dom.noteToggleBtn.addEventListener('click', () => {
-       const isHidden = this.dom.noteContainer.classList.contains('hidden');
-       if (isHidden) {
-          this.dom.noteContainer.classList.remove('hidden');
-          this.dom.noteToggleBtn.classList.add('active');
-          this.dom.noteTextarea.focus();
-       } else {
-          this.dom.noteContainer.classList.add('hidden');
-          this.dom.noteToggleBtn.classList.remove('active');
-       }
+      const isHidden = this.dom.noteContainer.classList.contains('hidden');
+      if (isHidden) {
+        this.dom.noteContainer.classList.remove('hidden');
+        this.dom.noteToggleBtn.classList.add('active');
+        this.dom.noteTextarea.focus();
+      } else {
+        this.dom.noteContainer.classList.add('hidden');
+        this.dom.noteToggleBtn.classList.remove('active');
+      }
     });
 
     this.dom.noteTextarea.addEventListener('input', (e) => {
-       const q = this.state.filteredQuestions[this.state.currentQuestionIndex];
-       if (!q) return;
-       const note = e.target.value.trim();
-       if (!this.state.quizProgress[q.id]) {
-           this.state.quizProgress[q.id] = { answered: false, isCorrect: false, userAnswer: null, revealed: false, note: '' };
-       }
-       this.state.quizProgress[q.id].note = note;
-       this.saveStateToStorage();
-       this.renderSidebar(); // Update grid indicators
-       this.updateStats(); // Update note count badge
+      const q = this.state.filteredQuestions[this.state.currentQuestionIndex];
+      if (!q) return;
+      const note = e.target.value.trim();
+      if (!this.state.quizProgress[q.id]) {
+        this.state.quizProgress[q.id] = { answered: false, isCorrect: false, userAnswer: null, revealed: false, note: '' };
+      }
+      this.state.quizProgress[q.id].note = note;
+      this.saveStateToStorage();
+      this.renderSidebar(); // Update grid indicators
+      this.updateStats(); // Update note count badge
     });
-    
+
     this.dom.revealAnswerBtn.addEventListener('click', () => this.revealAnswer());
 
     // Exam Mode Controls
@@ -429,7 +429,7 @@ class QuizApp {
       // Ignore if user is typing inside an input, textarea, or contenteditable element
       const activeEl = document.activeElement;
       const isInputActive = activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.isContentEditable);
-      
+
       if (isInputActive) {
         return;
       }
@@ -632,12 +632,12 @@ class QuizApp {
       if (currentFilter === 'single_choice' && q.type !== 'single_choice') return false;
       if (currentFilter === 'fill_blank' && q.type !== 'fill_blank') return false;
       if (currentFilter === 'favorites' && !favorites.includes(q.id)) return false;
-      
+
       if (currentFilter === 'correct') {
         const prog = quizProgress[q.id];
         if (!prog || !prog.isCorrect) return false;
       }
-      
+
       if (currentFilter === 'incorrect') {
         const prog = quizProgress[q.id];
         if (!prog || prog.isCorrect) return false;
@@ -680,7 +680,7 @@ class QuizApp {
   updateStats() {
     const { questions, quizProgress, favorites } = this.state;
     const totalCount = questions.length;
-    
+
     let answeredCount = 0;
     let correctCount = 0;
 
@@ -717,8 +717,8 @@ class QuizApp {
       if (filter === 'correct') badge.textContent = correctCount;
       if (filter === 'incorrect') badge.textContent = answeredCount - correctCount;
       if (filter === 'notes') {
-         const countNotes = questions.filter(q => quizProgress[q.id] && quizProgress[q.id].note && quizProgress[q.id].note.trim().length > 0).length;
-         badge.textContent = countNotes;
+        const countNotes = questions.filter(q => quizProgress[q.id] && quizProgress[q.id].note && quizProgress[q.id].note.trim().length > 0).length;
+        badge.textContent = countNotes;
       }
     });
   }
@@ -797,7 +797,7 @@ class QuizApp {
 
     // Set Card Metadata
     this.dom.questionNumberBadge.textContent = `Question #${q.id}`;
-    
+
     let typeLabel = 'MULTIPLE CHOICE';
     if (q.type === 'true_false') typeLabel = 'TRUE / FALSE';
     if (q.type === 'fill_blank') typeLabel = 'FILL IN THE BLANK';
@@ -814,13 +814,13 @@ class QuizApp {
     // Note State
     const prog = quizProgress[q.id];
     if (prog && prog.note && prog.note.trim().length > 0) {
-       this.dom.noteTextarea.value = prog.note;
-       this.dom.noteContainer.classList.remove('hidden');
-       this.dom.noteToggleBtn.classList.add('active');
+      this.dom.noteTextarea.value = prog.note;
+      this.dom.noteContainer.classList.remove('hidden');
+      this.dom.noteToggleBtn.classList.add('active');
     } else {
-       this.dom.noteTextarea.value = '';
-       this.dom.noteContainer.classList.add('hidden');
-       this.dom.noteToggleBtn.classList.remove('active');
+      this.dom.noteTextarea.value = '';
+      this.dom.noteContainer.classList.add('hidden');
+      this.dom.noteToggleBtn.classList.remove('active');
     }
 
     // Render Options / Input Container
@@ -830,7 +830,7 @@ class QuizApp {
 
     if (q.type === 'true_false' || q.type === 'single_choice') {
       const markers = ['A', 'B', 'C', 'D', 'E', 'F'];
-      
+
       q.options.forEach((optText, idx) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option-item';
@@ -1020,7 +1020,7 @@ class QuizApp {
    */
   showFeedbackBox(isCorrect, q, isRevealed = false) {
     this.dom.feedbackBox.classList.remove('hidden');
-    
+
     if (isRevealed) {
       this.dom.feedbackBox.className = 'feedback-box correct';
       this.dom.feedbackStatusIcon.textContent = 'i';
@@ -1313,6 +1313,47 @@ class QuizApp {
     this.renderSidebar();
     this.renderQuestionCard();
   }
+}
+
+// Launch application once DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  window.app = new QuizApp();
+});
+
+this.dom.examScorePercentage.textContent = `${scorePercentage}%`;
+this.dom.resTotal.textContent = totalCount;
+this.dom.resCorrect.textContent = correctCount;
+this.dom.resIncorrect.textContent = incorrectCount;
+
+// Save incorrect IDs for review
+this.state.examState.incorrectQuestionIds = incorrectQuestionIds;
+  }
+
+/**
+ * Review only the incorrect questions from the completed exam session
+ */
+reviewExamIncorrect() {
+  const incorrectIds = this.state.examState.incorrectQuestionIds || [];
+  if (incorrectIds.length === 0) {
+    showGlassAlert('Congratulations! You answered every question correctly in this exam session.', '🎉 Perfect Score!', '👑');
+    return;
+  }
+
+  this.state.currentMode = 'practice';
+  this.dom.modePracticeBtn.classList.add('active');
+  this.dom.modeExamBtn.classList.remove('active');
+
+  this.dom.practiceActions.classList.remove('hidden');
+  this.dom.examResultsCard.classList.add('hidden');
+  this.dom.questionCard.classList.remove('hidden');
+
+  // Filter questions to only the incorrect ones from exam
+  this.state.filteredQuestions = this.state.questions.filter(q => incorrectIds.includes(q.id));
+  this.state.currentQuestionIndex = 0;
+
+  this.renderSidebar();
+  this.renderQuestionCard();
+}
 }
 
 // Launch application once DOM is ready

@@ -629,7 +629,7 @@ body.light-theme .brand-text h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .grid-btn.has-note::after {
@@ -645,7 +645,7 @@ body.light-theme .brand-text h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================================================
@@ -702,7 +702,8 @@ body.light-theme .brand-text h1 {
   letter-spacing: 0.05em;
 }
 
-.favorite-btn, .note-btn {
+.favorite-btn,
+.note-btn {
   background: transparent;
   border: none;
   font-size: 1.6rem;
@@ -726,7 +727,8 @@ body.light-theme .brand-text h1 {
 }
 
 .note-btn {
-  font-size: 1.3rem; /* slightly smaller icon */
+  font-size: 1.3rem;
+  /* slightly smaller icon */
 }
 
 .note-btn:hover {
@@ -762,17 +764,20 @@ body.light-theme .brand-text h1 {
 /* Note Container */
 .note-container {
   margin-bottom: 20px;
-  max-height: 200px; /* limits expansion */
+  max-height: 200px;
+  /* limits expansion */
   opacity: 1;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
+
 .note-container.hidden {
   max-height: 0;
   opacity: 0;
   margin-bottom: 0;
   pointer-events: none;
-  display: block !important; /* override default hidden class to allow animation */
+  display: block !important;
+  /* override default hidden class to allow animation */
 }
 
 .note-input {

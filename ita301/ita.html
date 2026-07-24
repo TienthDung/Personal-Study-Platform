@@ -248,8 +248,8 @@
             <!-- Right: Navigation Links -->
             <div class="header-actions">
                 <div style="display: flex; align-items: center; gap: 16px;">
-                    <a href="../index.html" class="nav-link-liquid">Homepage</a>
-                    <a href="#" class="nav-link-liquid">Contact</a>
+                    <a href="ita.html" class="nav-link-liquid">Homepage</a>
+                    <a href="#" id="contact-nav-btn" class="nav-link-liquid">Contact</a>
                 </div>
             </div>
         </header>
@@ -471,13 +471,22 @@
         .auth-modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .auth-modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .auth-modal-content {
@@ -492,6 +501,13 @@
             flex-direction: column;
             gap: 24px;
             color: #fff;
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: transform;
+        }
+
+        .auth-modal-overlay.active .auth-modal-content {
+            transform: translateY(0) scale(1);
         }
 
         .auth-modal-header h2 {
@@ -585,9 +601,124 @@
             border-color: rgba(0, 0, 0, 0.1);
             color: #0f172a;
         }
+
+        /* Contact Modal Specifics */
+        .contact-content {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            align-items: center;
+            max-width: 420px;
+        }
+
+        .contact-icon-wrapper {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-email-box {
+            text-align: center;
+            margin: 5px 0;
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-email-text {
+            font-size: 1.1rem;
+            color: #f8fafc;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-send-btn {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border: none;
+            padding: 16px;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            color: white;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+
+        .contact-send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+        }
+
+        .contact-close-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #cbd5e1;
+            padding: 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .contact-close-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+        }
+
+        /* Light Theme Overrides for Contact Modal */
+        body.light-theme .contact-content {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        body.light-theme .contact-icon-wrapper {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+            border-color: rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+        }
+
+        body.light-theme .contact-email-box {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        body.light-theme .contact-email-text {
+            color: #0f172a;
+        }
+
+        body.light-theme .contact-close-btn {
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #475569;
+        }
+
+        body.light-theme .contact-close-btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: #0f172a;
+        }
     </style>
 
-    <div id="auth-modal" class="auth-modal-overlay" style="display: none;">
+    <div id="auth-modal" class="auth-modal-overlay">
         <div class="auth-modal-content">
             <div class="auth-modal-header">
                 <h2>Security Verification</h2>
@@ -622,37 +753,68 @@
                 <label>Enter key to continue:</label>
                 <input type="password" id="auth-q4" class="auth-input" placeholder="Enter access key"
                     autocomplete="off">
-                        <div id="auth-error-msg" class="auth-error"></div>
+            </div>
+
+            <div id="auth-error-msg" class="auth-error"></div>
 
             <button id="auth-verify-btn" class="auth-submit-btn">Verify & Access</button>
         </div>
     </div>
 
-    <script>
-        // Helper function to calculate SHA-256 using Browser Web Crypto API
-        async function hashSHA256(text) {
-            const msgUint8 = new TextEncoder().encode(text);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex;
-        }
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="auth-modal-overlay">
+        <div class="auth-modal-content contact-content">
+            <!-- Elegant Icon -->
+            <div class="contact-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#contactGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <defs>
+                        <linearGradient id="contactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#60a5fa" />
+                            <stop offset="100%" stop-color="#c084fc" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </div>
 
+            <div class="auth-modal-header" style="margin-top: 10px;">
+                <h2 style="background: linear-gradient(135deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Get in Touch</h2>
+                <p>Have questions, feedback, or need support?<br>Drop me an email!</p>
+            </div>
+            
+            <div class="contact-email-box">
+                <!-- Decorative glow inside the email box -->
+                <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(96,165,250,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+                <p class="contact-email-text">tiendungthan0806@gmail.com</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; width: 100%; gap: 12px; margin-top: 10px;">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tiendungthan0806@gmail.com" target="_blank" class="contact-send-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    Send Email via Gmail
+                </a>
+                
+                <button id="close-contact-btn" class="contact-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const authModal = document.getElementById('auth-modal');
+            const isAuth = localStorage.getItem('ownerAuth');
             const expiry = localStorage.getItem('ownerAuthExpiry');
 
-            // If no valid session or session is expired
-            if (!expiry || Date.now() > parseInt(expiry, 10)) {
-                localStorage.removeItem('ownerAuthExpiry'); // Clean up expired session
-                authModal.style.display = 'flex';
+            if (isAuth !== 'true' || (expiry && Date.now() > parseInt(expiry))) {
+                authModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
 
             const verifyBtn = document.getElementById('auth-verify-btn');
             const errorMsg = document.getElementById('auth-error-msg');
 
-            verifyBtn.addEventListener('click', async () => {
+            verifyBtn.addEventListener('click', () => {
                 const q1 = document.getElementById('auth-q1').value.trim();
                 const q2 = document.getElementById('auth-q2').value;
                 const q3 = document.getElementById('auth-q3').value;
@@ -662,19 +824,16 @@
                 const isQ1Correct = (q1 === 'Thân Tiến Dũng');
                 const isQ2Correct = (q2 === 'Yes');
                 const isQ3Correct = (q3 === 'Yes');
-
-                const q4Hash = await hashSHA256(q4);
-                const isQ4Correct = (q4Hash === '55d1da8ba4d582cf0a84d0e22022796455baca47e7c817698f841085e39602b1' || 
-                                     q4Hash === 'b6b1966c79c3aeac4cc18cef17918808c3ffbb2e4e56d28a9510482888c131dc');
+                const isQ4Correct = (q4 === 'se203676' || q4 === 'SE203676');
 
                 if (isQ1Correct && isQ2Correct && isQ3Correct && isQ4Correct) {
-                    // Set session expiry to current time + 3 hours
                     const expiryTime = Date.now() + (3 * 60 * 60 * 1000);
                     localStorage.setItem('ownerAuthExpiry', expiryTime);
-                    authModal.style.display = 'none';
+                    localStorage.setItem('ownerAuth', 'true');
+                    authModal.classList.remove('active');
                     document.body.style.overflow = ''; // Restore original overflow from CSS
                 } else {
-                    localStorage.removeItem('ownerAuthExpiry');
+                    localStorage.setItem('ownerAuth', 'false');
                     errorMsg.textContent = 'Verification failed. Please ensure all answers are absolutely correct.';
 
                     // Add shake effect
@@ -696,6 +855,28 @@
                     }
                 });
             });
+
+            // Contact Modal Logic
+            const contactBtn = document.getElementById('contact-nav-btn');
+            const contactModal = document.getElementById('contact-modal');
+            const closeContactBtn = document.getElementById('close-contact-btn');
+            
+            if (contactBtn && contactModal) {
+                contactBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    contactModal.classList.add('active');
+                });
+                
+                closeContactBtn.addEventListener('click', () => {
+                    contactModal.classList.remove('active');
+                });
+                
+                contactModal.addEventListener('click', (e) => {
+                    if (e.target === contactModal) {
+                        contactModal.classList.remove('active');
+                    }
+                });
+            }
         });
 
         // ==========================================

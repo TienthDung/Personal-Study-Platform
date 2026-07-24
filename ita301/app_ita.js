@@ -354,28 +354,28 @@ class QuizApp {
 
     // Note Toggle & Input
     this.dom.noteToggleBtn.addEventListener('click', () => {
-       const isHidden = this.dom.noteContainer.classList.contains('hidden');
-       if (isHidden) {
-          this.dom.noteContainer.classList.remove('hidden');
-          this.dom.noteToggleBtn.classList.add('active');
-          this.dom.noteTextarea.focus();
-       } else {
-          this.dom.noteContainer.classList.add('hidden');
-          this.dom.noteToggleBtn.classList.remove('active');
-       }
+      const isHidden = this.dom.noteContainer.classList.contains('hidden');
+      if (isHidden) {
+        this.dom.noteContainer.classList.remove('hidden');
+        this.dom.noteToggleBtn.classList.add('active');
+        this.dom.noteTextarea.focus();
+      } else {
+        this.dom.noteContainer.classList.add('hidden');
+        this.dom.noteToggleBtn.classList.remove('active');
+      }
     });
 
     this.dom.noteTextarea.addEventListener('input', (e) => {
-       const q = this.state.filteredQuestions[this.state.currentQuestionIndex];
-       if (!q) return;
-       const note = e.target.value.trim();
-       if (!this.state.quizProgress[q.id]) {
-           this.state.quizProgress[q.id] = { answered: false, isCorrect: false, userAnswer: null, revealed: false, note: '' };
-       }
-       this.state.quizProgress[q.id].note = note;
-       this.saveStateToStorage();
-       this.renderSidebar(); // Update grid indicators
-       this.updateStats(); // Update note count badge
+      const q = this.state.filteredQuestions[this.state.currentQuestionIndex];
+      if (!q) return;
+      const note = e.target.value.trim();
+      if (!this.state.quizProgress[q.id]) {
+        this.state.quizProgress[q.id] = { answered: false, isCorrect: false, userAnswer: null, revealed: false, note: '' };
+      }
+      this.state.quizProgress[q.id].note = note;
+      this.saveStateToStorage();
+      this.renderSidebar(); // Update grid indicators
+      this.updateStats(); // Update note count badge
     });
 
     this.dom.revealAnswerBtn.addEventListener('click', () => this.revealAnswer());
@@ -642,7 +642,7 @@ class QuizApp {
         const prog = quizProgress[q.id];
         if (!prog || prog.isCorrect) return false;
       }
-      
+
       if (currentFilter === 'notes') {
         const prog = quizProgress[q.id];
         if (!prog || !prog.note || prog.note.trim().length === 0) return false;
@@ -717,8 +717,8 @@ class QuizApp {
       if (filter === 'correct') badge.textContent = correctCount;
       if (filter === 'incorrect') badge.textContent = answeredCount - correctCount;
       if (filter === 'notes') {
-         const countNotes = questions.filter(q => quizProgress[q.id] && quizProgress[q.id].note && quizProgress[q.id].note.trim().length > 0).length;
-         badge.textContent = countNotes;
+        const countNotes = questions.filter(q => quizProgress[q.id] && quizProgress[q.id].note && quizProgress[q.id].note.trim().length > 0).length;
+        badge.textContent = countNotes;
       }
     });
   }
@@ -814,13 +814,13 @@ class QuizApp {
     // Note State
     const prog = quizProgress[q.id];
     if (prog && prog.note && prog.note.trim().length > 0) {
-       this.dom.noteTextarea.value = prog.note;
-       this.dom.noteContainer.classList.remove('hidden');
-       this.dom.noteToggleBtn.classList.add('active');
+      this.dom.noteTextarea.value = prog.note;
+      this.dom.noteContainer.classList.remove('hidden');
+      this.dom.noteToggleBtn.classList.add('active');
     } else {
-       this.dom.noteTextarea.value = '';
-       this.dom.noteContainer.classList.add('hidden');
-       this.dom.noteToggleBtn.classList.remove('active');
+      this.dom.noteTextarea.value = '';
+      this.dom.noteContainer.classList.add('hidden');
+      this.dom.noteToggleBtn.classList.remove('active');
     }
 
     // Render Options / Input Container
@@ -1314,6 +1314,11 @@ class QuizApp {
     this.renderQuestionCard();
   }
 }
+
+// Launch application once DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  window.app = new QuizApp();
+});
 
 // Launch application once DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
