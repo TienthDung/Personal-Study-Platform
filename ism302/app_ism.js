@@ -481,10 +481,16 @@ class QuizApp {
         e.preventDefault();
         this.navigateRelative(1);
       }
-      // 4. Previous question: ArrowLeft, 'p', 'P', 'b', 'B'
       else if (e.key === 'ArrowLeft' || e.key === 'p' || e.key === 'P' || e.key === 'b' || e.key === 'B') {
         e.preventDefault();
         this.navigateRelative(-1);
+      }
+      // 5. Reveal answer: Spacebar
+      else if (e.key === ' ' || e.code === 'Space') {
+        if (this.state.currentMode === 'practice') {
+          e.preventDefault();
+          this.revealAnswer();
+        }
       }
     });
   }
